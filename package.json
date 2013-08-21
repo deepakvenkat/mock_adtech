@@ -1,0 +1,19 @@
+{
+  "name": "Mock_Adtech",
+  "version": "0.0.1",
+  "description": "Mock Adtech",
+  "dependencies": {
+    "socket.io" : "latest",
+    "express"   : "latest",
+    "jade"      : "latest",
+    "nodemon"   : "latest",
+    "underscore" : "latest"
+  },
+  "contributors" : [
+    {
+      "name" : "Deepak",
+      "github" : "http://github.com/deepakvenkat"
+    }
+  ]
+
+}
