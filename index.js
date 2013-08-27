@@ -18,27 +18,28 @@ app.get("/", function (req, res) {
 });
 
 
-app.get("/ads", function (req, res) {
-  var url_parts = url.parse(req.url, true);
-  var query = url_parts.query;
-  console.log(query);
+app.get("/ads:id", function (req, res) {
+  // var url_parts = url.parse(req.url, true);
+  // var query = url_parts.query;
+  // console.log(query);
+  var query = req.params.id;
+  var params = query.split(';');
   var rand = Math.random();
   if(rand % 7 === 0){
     console.log("random failure");
     res.send("var a = 'blah'");
     return;
   }
-  if (query.current_ad === "1") {
-    fs.readFile('double_slate_with_vasts_1.js', function (error, file) {
+  if (params.indexOf("KVcurrent_ad=1") > -1/*query.current_ad === "1"*/) {
+    fs.readFile('double_slate_1.js', function (error, file) {
       if(error)
         console.log(error);
       else {
         res.writeHead(200, {'Content-Type': "text/javascript"});
-        console.log(query.current_ad === '1');
         res.end(file);
       }
     });
-  } else if (query.current_ad === "2") {
+  } else if (params.indexOf("KVcurrent_ad=2") > -1 /*query.current_ad === "2"*/) {
     if(rand % 11 === 0) {
       res.send("var a = 'blah'");
       return;
@@ -48,7 +49,6 @@ app.get("/ads", function (req, res) {
         console.log(error);
       else {
         res.writeHead(200, {'Content-Type': "text/javascript"});
-        console.log(query.current_ad === '1');
         res.end(file);
       }
     });
@@ -58,6 +58,28 @@ app.get("/ads", function (req, res) {
 
 app.get("/vast", function (req, res) {
   fs.readFile("vast.xml", function (error, file) {
+    if(error)
+      console.log(error);
+    else {
+      res.writeHead(200, {'Content-Type': 'application/xml'});
+      res.end(file);
+    }
+  });
+});
+
+app.get("/legacy_vast:id", function (req, res) {
+  fs.readFile("legacy_template.js", function (error, file) {
+    if(error)
+      console.log(error);
+    else {
+      res.writeHead(200, {'Content-Type': 'application/xml'});
+      res.end(file);
+    }
+  });
+});
+
+app.get("legacy_vast_dual:id", function (req, res) {
+  fs.readFile("legacy_template_dual.js", function (error, file) {
     if(error)
       console.log(error);
     else {

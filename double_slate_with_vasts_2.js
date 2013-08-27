@@ -1,13 +1,72 @@
-// initContentUnlockWithInternalPlayer(/*ad_url*/, "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/2802984/0/16/AdId=4486947;BnId=1;ct=3029701815;st=1387;adcid=1;itime=797018246;reqtype=25;");
+
 var initFunctionName = "initContentUnlockWithInternalPlayer";
-var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/2802984/0/16/AdId=4486947;BnId=1;ct=3029701815;st=1387;adcid=1;itime=797018246;reqtype=25;"];
+
+var initParams = [ "url", "600", "450", true, "http://adserver.adtechus.com/adcount/3.0/5372/3006182/0/16/AdId=4634357;BnId=1;ct=2544221428;st=4930;adcid=1;itime=639073605;reqtype=25;;kr21194=221;kp=276193"];
+
+var bottom_margin = 65; //Use this variable to move the skip timer up or down. Eg. setting to 30 will move the skip 30px from the bottom
+
+setCunlockSkipButton(false,20,bottom_margin,false, 5);
 
 var exclusive = false;
-var bottom_margin = 65; //Use this variable to move the skip timer up or down. Eg. setting to 30 will move the skip 30px from the bottom
-setCunlockSkipButton(true,12,bottom_margin,false);
-var vast_1 = '<VAST version="2.0">  <Ad id="ucorona">   <InLine>      <AdSystem>2.0</AdSystem>      <AdTitle>       <![CDATA[Corona Extra: "Spotlight"]]>     </AdTitle>      <Impression id="unrulymedia">       <![CDATA[http://statsu.unrulymedia.com/blank.gif?t=imp&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]>      </Impression>     <Creatives>       <Creative>          <Linear>            <Duration>00:00:31</Duration>           <TrackingEvents>              <Tracking event="start">                <![CDATA[http://statsu.unrulymedia.com/blank.gif?t=play&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static&amp;desturl=http%3A%2F%2Fstatsu.unrulymedia.com%2Fblank.gif%3Ft%3Dengaged%26ppid%3D2406855%26apid%3D17518%26pid%3D48657%26aid%3D1466%26vid%3D6250%26crid%3D5068%26cid%3D2947%26ptype%3Dvast_static%26rn%3DREPLACE_ME_WITH_A_TIMESTAMP%26desturl%3Dhttp%253A%252F%252Fsecure-us.imrworldwide.com%252Fcgi-bin%252Fm%253Fci%253Dent31234%2526am%253D3%2526ep%253D1%2526at%253Dview%2526rt%253Dbanner%2526st%253Dimage%2526ca%253Dcmp5882%2526cr%253Dcrv50343%2526pc%253Dplc85016%2526r%253D%255BCACHEBUSTER%255D]]>             </Tracking>             <Tracking event="start">                <![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&amp;c=19&amp;mc=imp&amp;pli=4204925&amp;PluID=0&amp;ord=[CACHEBUSTER]&amp;rtu=-1]]>             </Tracking>             <Tracking event="firstQuartile">                <![CDATA[http://statsu.unrulymedia.com/blank.gif?t=q2&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]>             </Tracking>             <Tracking event="midpoint">               <![CDATA[http://statsu.unrulymedia.com/blank.gif?t=q3&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]>             </Tracking>             <Tracking event="thirdQuartile">                <![CDATA[http://statsu.unrulymedia.com/blank.gif?t=q4&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]>             </Tracking>             <Tracking event="complete">               <![CDATA[http://statsu.unrulymedia.com/blank.gif?t=complete&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]>             </Tracking>           </TrackingEvents>           <VideoClicks>             <ClickThrough id="unrulymedia">               <![CDATA[http://video.unrulymedia.com/cfp_69806387.html?ptype=vast_static&amp;cb=[CACHEBUSTER]]]>             </ClickThrough>           </VideoClicks>            <MediaFiles>              <MediaFile height="360" width="480" bitrate="528" type="video/mp4" delivery="progressive">                <![CDATA[http://youtube.com/embed/Vz1uzLoPd9g]]>              </MediaFile>            </MediaFiles>         </Linear>       </Creative>       <Creative sequence="1" id="331">            <CompanionAds>                <Companion width="300" height="250">                            <StaticResource creativeType="image/jpeg"><![CDATA[http://cdn.liverail.com/adasset/229/331/300x250.jpg]]></StaticResource>                            <TrackingEvents>                                <Tracking event="creativeView"><![CDATA[http://t4.liverail.com/?metric=companion&pos=0&coid=135&pid=1331&nid=1331&oid=2291331&olid=2291331&cid=331&vid=&amid=&cc=default&pp=&vv=&tt=&sg=&tsg=&pmu=0&pau=0&psz=0&url=http%3A%2F%2Fwww.iab.net%2Fguidelines%2F508676%2Fdigitalvideo%2Fvast%2Fvast_xml_samples&cb=2675.72.229.54.101&x=&y=&xy=]]></Tracking>                            </TrackingEvents>                            <CompanionClickThrough><![CDATA[http://t4.liverail.com/?metric=cclickthru&pos=0&coid=135&pid=1331&nid=1331&oid=2291331&olid=2291331&cid=331&vid=&amid=&cc=default&pp=&vv=&tt=&sg=&tsg=&pmu=0&pau=0&psz=0&url=http%3A%2F%2Fwww.iab.net%2Fguidelines%2F508676%2Fdigitalvideo%2Fvast%2Fvast_xml_samples&cb=2675.72.229.54.101&x=&y=&xy=&redirect=http%3A%2F%2Fwww.liverail.com]]></CompanionClickThrough>                        </Companion>                <Companion width="728" height="90">                            <StaticResource creativeType="image/jpeg"><![CDATA[http://cdn.liverail.com/adasset4/1331/229/331/e325b87ef48ec343e4a5d807f094fc39.jpg]]></StaticResource>                            <TrackingEvents>                                <Tracking event="creativeView"><![CDATA[http://t4.liverail.com/?metric=companion&pos=0&coid=135&pid=1331&nid=1331&oid=2291331&olid=2291331&cid=331&vid=&amid=&cc=default&pp=&vv=&tt=&sg=&tsg=&pmu=0&pau=0&psz=0&url=http%3A%2F%2Fwww.iab.net%2Fguidelines%2F508676%2Fdigitalvideo%2Fvast%2Fvast_xml_samples&cb=2675.72.229.54.101&x=&y=&xy=]]></Tracking>                            </TrackingEvents>                            <CompanionClickThrough><![CDATA[http://t4.liverail.com/?metric=cclickthru&pos=0&coid=135&pid=1331&nid=1331&oid=2291331&olid=2291331&cid=331&vid=&amid=&cc=default&pp=&vv=&tt=&sg=&tsg=&pmu=0&pau=0&psz=0&url=http%3A%2F%2Fwww.iab.net%2Fguidelines%2F508676%2Fdigitalvideo%2Fvast%2Fvast_xml_samples&cb=2675.72.229.54.101&x=&y=&xy=&redirect=http%3A%2F%2Fwww.liverail.com]]></CompanionClickThrough>                        </Companion>            </CompanionAds>         </Creative>     </Creatives>      <Extensions>        <Extension type="GM">         <AutoPlay>true</AutoPlay>         <Logo>http://gm-cu-bs-prod.s3.amazonaws.com/test/audi.swf</Logo>          <VisorDuration>5000</VisorDuration>         <LinkedIn>            <Url>http://daily-spots.com</Url>           <Title>Your Source For Current And Unique Lifestyle Trends</Title>            <Tracking>http://daily-spots.com/linkedin_click</Tracking>          </LinkedIn>         <Twitter>           <Message>Check this out</Message>           <Tracking>http://daily-spots.com/twitter_click</Tracking>         </Twitter>          <Pinterest>           <Url>http://daily-spots.com/1</Url>           <Tracking>http://daily-spots.com/Pinterest_click</Tracking>         </Pinterest>          <Instagram>           <Url>http://daily-spots.com/2</Url>           <Tracking>http://daily-spots.com/Instagram_click</Tracking>         </Instagram>          <Branding>            <Url>http://daily-spots.com</Url>           <Logo>http://www.punhon.com/bi/Burlington_Coat_Factory.gif</Logo>           <RightImage>http://www.punhon.com/bi/Picture1.png</RightImage>            <Message>UP TO 70% OFF DEPARTMENT STORE PRICES EVERY DAY</Message>          </Branding>           <CountdownDuration>-1</CountdownDuration>               </Extension>      </Extensions>   </InLine> </Ad></VAST>';
-
-var default_vast = "http://cunlock.localhost.com/adtech/left_vast.xml";
-var message = "<right>";
-var skiptime = 0;
+var message = "";
+var skiptime = 20;
 var autoplay = false;
+
+var vast_1 = '<VAST version="2.0"><Ad id="4634357">\
+<InLine>\
+<AdSystem>AdTech</AdSystem>\
+<AdTitle>CUBSTesting_Exclusive_Slate1only_4634357</AdTitle>\
+<Impression></Impression>\
+<Creatives>\
+<Creative AdID="4634357">\
+<Linear>\
+<Duration>00:00:60</Duration>\
+<TrackingEvents>\
+<Tracking event="start"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videostart/seg=campaign^4634357^22788820^abbr=18328;no_of_slates=2;current_ad=1]]></Tracking>\
+<Tracking event="start"><![CDATA[http://adserver.adtechus.com/adcount/3.0/5372/3006182/0/16/AdId=4634357;BnId=1;ct=2544221428;st=4947;adcid=1;itime=639073605;reqtype=25;;kr21194=221;kp=276193]]></Tracking>\
+<Tracking event="start"><![CDATA[http://pix.genesismedia.com/a0bc.png?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+<Tracking event="start"><![CDATA[http://b.scorecardresearch.com/p?c1=1&c2=16170130&c3=bs&c5=09&cv=2.0&cj=1]]></Tracking>\
+<Tracking event="start"><![CDATA[http://beacon.eyeviewads.com/1.gif?ev=impression&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.12.88&tyld=GRBG&uid=8852d211dd52262d&madhashid=ad0276cc&did=14843&rfv=7&asv=2699&adp=VAST2&iid=fab5e98876c2dd1999571a09f80d31e9&rt=1377636033237]]></Tracking>\
+\
+\
+<Tracking event="firstQuartile"><![CDATA[http://pix.genesismedia.com/t25f.png?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+<Tracking event="firstQuartile"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645531?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+\
+\
+<Tracking event="midpoint"><![CDATA[http://pix.genesismedia.com/f50s.png?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+<Tracking event="midpoint"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645532?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+\
+\
+<Tracking event="thirdQuartile"><![CDATA[http://pix.genesismedia.com/s75t.png?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+<Tracking event="thirdQuartile"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645533?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+\
+\
+<Tracking event="complete"><![CDATA[http://pix.genesismedia.com/o100l.png?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+\
+\
+<Tracking event="complete"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videoend/seg=campaign^4634357^22788820^abbr=18328;no_of_slates=2;current_ad=1]]></Tracking>\
+</TrackingEvents>\
+<VideoClicks>\
+<ClickTracking><![CDATA[http://adserver.adtechus.com/adlink/5372/3006182/0/16/AdId=4634357;BnId=1;itime=639073605;kr21194=221;kp=276193;nodecode=yes;link=]]></ClickTracking>\
+<ClickThrough><![CDATA[http://cdn.bleacherreport.net/images_root/slides/photos/001/923/357/john_tavares-1_display_image.jpg?1329329315]]></ClickThrough>\
+</VideoClicks>\
+<MediaFiles>\
+<MediaFile delivery="progressive" type="video/x-flv" scalable="true" maintainAspectRatio="true">http://d1cyvnjc1olxmw.cloudfront.net/GenesisAdvertisers/Test%20Videos/Stan.flv</MediaFile>\
+</MediaFiles>\
+</Linear>\
+</Creative>\
+</Creatives>\
+<Extensions>\
+<Extension type="GM">\
+<AutoPlay>true</AutoPlay>\
+<AdRemainingTimeEnabled>true</AdRemainingTimeEnabled>\
+<CountdownDuration>-1</CountdownDuration>\
+<Trackings>\
+<Tracking event="progress" value="15"> <![CDATA[]]></Tracking>\
+<Tracking event="progress" value="0"> <![CDATA[http://pix.genesismedia.com/billable.png?CUBSTesting_Exclusive_Slate1only_4634357^4634357^22788820^3006182]]></Tracking>\
+</Trackings>\
+</Extension>\
+</Extensions>\
+</InLine>\
+</Ad>\
+</VAST>';
