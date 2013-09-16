@@ -1,72 +1,15 @@
 
 var initFunctionName = "initContentUnlockWithInternalPlayer";
 
-var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/3004861/0/16/AdId=4613929;BnId=1;ct=2864766660;st=6530;adcid=1;itime=201307377;reqtype=25;"];
+var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/3004861/0/16/AdId=4613929;BnId=1;ct=2864766660;st=6530;adcid=1;itime=201307377;reqtype=25;", true, "3", "1"];
 
 var bottom_margin = 65; //Use this variable to move the skip timer up or down. Eg. setting to 30 will move the skip 30px from the bottom
 
-setCunlockSkipButton(true, 20, bottom_margin, false, 15);
+setCunlockSkipButton(true, 20, bottom_margin, false, 15, "http://cunlock.localhost.com:3000/skipAd");
 
 var exclusive = false;
 var message = "";
 var skiptime = 20;
 var autoplay = false;
 
-var vast_1 = '<VAST version="2.0">\
-<Ad id="4613929">\
-<InLine>\
-<AdSystem>AdTech</AdSystem>\
-<AdTitle>CUBS_JS_Test</AdTitle>\
-<Impression></Impression>\
-<Creatives>\
-<Creative AdID="4613929">\
-<Linear>\
-<Duration>00:00:60</Duration>\
-<TrackingEvents>\
-<Tracking event="start"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videostart/seg=campaign^4613929^22772819^abbr=18328?&no_of_ads=1&current_ad=1]]></Tracking>\
-<Tracking event="start"><![CDATA[http://adserver.adtechus.com/adcount/3.0/5372/3004861/0/16/AdId=4613929;BnId=1;ct=2864766660;st=6549;adcid=1;itime=201307377;reqtype=25;]]></Tracking>\
-<Tracking event="start"><![CDATA[http://pix.genesismedia.com/a0bc.png?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-<Tracking event="start"><![CDATA[http://b.scorecardresearch.com/p?c1=1&c2=16170130&c3=bs&c5=09&cv=2.0&cj=1]]></Tracking>\
-\
-\
-\
-<Tracking event="firstQuartile"><![CDATA[http://pix.genesismedia.com/t25f.png?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-<Tracking event="firstQuartile"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645531?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-\
-\
-<Tracking event="midpoint"><![CDATA[http://pix.genesismedia.com/f50s.png?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-<Tracking event="midpoint"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645532?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-\
-\
-<Tracking event="thirdQuartile"><![CDATA[http://pix.genesismedia.com/s75t.png?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-<Tracking event="thirdQuartile"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645533?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-\
-\
-<Tracking event="complete"><![CDATA[http://pix.genesismedia.com/o100l.png?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-\
-\
-<Tracking event="complete"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videoend/seg=campaign^4613929^22772819^abbr=18328?&no_of_ads=1&current_ad=1]]></Tracking>\
-</TrackingEvents>\
-<VideoClicks>\
-<ClickTracking><![CDATA[http://adserver.adtechus.com/adlink/5372/3004861/0/16/AdId=4613929;BnId=1;itime=201307377;nodecode=yes;link=]]></ClickTracking>\
-<ClickThrough><![CDATA[http://www.youtube.com]]></ClickThrough>\
-</VideoClicks>\
-<MediaFiles>\
-<MediaFile delivery="progressive" type="video/x-flv" scalable="true" maintainAspectRatio="true">http://www.youtube.com/embed/EF8GhC-T_Mo</MediaFile>\
-</MediaFiles>\
-</Linear>\
-</Creative>\
-</Creatives>\
-<Extensions>\
-<Extension type="GM">\
-<AutoPlay>false</AutoPlay>\
-<AdRemainingTimeEnabled>true</AdRemainingTimeEnabled>\
-<Trackings>\
-<Tracking event="progress" value="15"> <![CDATA[]]></Tracking>\
-<Tracking event="progress" value="15"> <![CDATA[http://pix.genesismedia.com/billable.png?CUBS_JS_Test^4613929^22772819^3004861]]></Tracking>\
-</Trackings>\
-</Extension>\
-</Extensions>\
-</InLine>\
-</Ad>\
-</VAST>';
+var vast_1 = '<VAST version="2.0"><Ad id="ucorona"><InLine><AdSystem>2.0</AdSystem><AdTitle><![CDATA[Corona Extra: "Spotlight"]]></AdTitle><Impression id="unrulymedia"><![CDATA[http://statsu.unrulymedia.com/blank.gif?t=imp&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]></Impression><Creatives><Creative><Linear><Duration>00:00:31</Duration><TrackingEvents><Tracking event="start"><![CDATA[http://statsu.unrulymedia.com/blank.gif?t=play&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static&amp;desturl=http%3A%2F%2Fstatsu.unrulymedia.com%2Fblank.gif%3Ft%3Dengaged%26ppid%3D2406855%26apid%3D17518%26pid%3D48657%26aid%3D1466%26vid%3D6250%26crid%3D5068%26cid%3D2947%26ptype%3Dvast_static%26rn%3DREPLACE_ME_WITH_A_TIMESTAMP%26desturl%3Dhttp%253A%252F%252Fsecure-us.imrworldwide.com%252Fcgi-bin%252Fm%253Fci%253Dent31234%2526am%253D3%2526ep%253D1%2526at%253Dview%2526rt%253Dbanner%2526st%253Dimage%2526ca%253Dcmp5882%2526cr%253Dcrv50343%2526pc%253Dplc85016%2526r%253D%255BCACHEBUSTER%255D]]></Tracking><Tracking event="start"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&amp;c=19&amp;mc=imp&amp;pli=4204925&amp;PluID=0&amp;ord=[CACHEBUSTER]&amp;rtu=-1]]></Tracking><Tracking event="firstQuartile"><![CDATA[http://statsu.unrulymedia.com/blank.gif?t=q2&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]></Tracking><Tracking event="midpoint"><![CDATA[http://statsu.unrulymedia.com/blank.gif?t=q3&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]></Tracking><Tracking event="thirdQuartile"><![CDATA[http://statsu.unrulymedia.com/blank.gif?t=q4&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]></Tracking><Tracking event="complete"><![CDATA[http://statsu.unrulymedia.com/blank.gif?t=complete&amp;ppid=2406855&amp;apid=17518&amp;pid=48657&amp;aid=1466&amp;vid=6250&amp;crid=5068&amp;cid=2947&amp;ptype=vast_static]]></Tracking></TrackingEvents><VideoClicks><ClickThrough id="unrulymedia"><![CDATA[http://video.unrulymedia.com/cfp_69806387.html?ptype=vast_static&amp;cb=[CACHEBUSTER]]]></ClickThrough><ClickTracking><![CDATA[http://www.punhon.com/xxxxxxxxx]]></ClickTracking></VideoClicks><MediaFiles><MediaFile height="360" width="480" bitrate="528" type="video/x-flv" delivery="progressive"><![CDATA[http://www.learnwake.com/samples/flv/intro.flv]]></MediaFile></MediaFiles></Linear></Creative></Creatives><Extensions><Extension type="GM"><Trackings><Tracking event="progress" value="5"><![CDATA[http://www.punhon.com/15secxxxxxxxxx]]></Tracking></Trackings><Logo>Test Logo</Logo><VisorDuration>5000</VisorDuration><VisorIconSpacing>10</VisorIconSpacing><VisorBarHeight>100</VisorBarHeight><VisorColor>FFFFFF</VisorColor><LinkedIn><Url>http://daily-spots.com</Url><Title>Your Source For Current And Unique Lifestyle Trends</Title><Tracking>http://daily-spots.com/linkedin_click</Tracking></LinkedIn><Twitter><Message>Check this out</Message><Tracking>http://daily-spots.com/twitter_click</Tracking></Twitter><Pinterest><Url>http://daily-spots.com/1</Url><Tracking>http://daily-spots.com/Pinterest_click</Tracking></Pinterest><Instagram><Url>http://daily-spots.com/2</Url><Tracking>http://daily-spots.com/Instagram_click</Tracking></Instagram><Branding><Url>http://daily-spots.com</Url><Logo>http://www.punhon.com/bi/Burlington_Coat_Factory.gif</Logo><CustomIcons><Icon><Image>http://www.punhon.com/bi/Picture1.png</Image><Url>http://www.burlingtoncoatfactory.com/</Url><Tracking>http://daily-spots.com/custom1_click</Tracking></Icon><Icon><Image>http://www.punhon.com/bi/Picture2.png</Image><Url>http://www.burlingtoncoatfactory.com/StoreLocator.aspx?q=</Url><Tracking>http://daily-spots.com/custom2_click</Tracking></Icon></CustomIcons><Message>UP TO 70% OFF DEPARTMENT STORE PRICES EVERY DAY</Message><MultiLine>true</MultiLine><TextColor>ff0000</TextColor><TextSize>24</TextSize><Font>Arial</Font></Branding><CountdownDuration>5</CountdownDuration></Extension></Extensions></InLine></Ad></VAST>';

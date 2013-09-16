@@ -88,3 +88,23 @@ app.get("legacy_vast_dual:id", function (req, res) {
     }
   });
 });
+
+
+app.get("/vast_wrapper:id", function (req, res) {
+  fs.readFile("vast_wrapper.js", function (error, file) {
+    if(error)
+      console.log(error);
+    else {
+      res.writeHead(200, {'Content-Type': 'application/xml'});
+      res.end(file);
+    }
+  });
+});
+
+
+app.get("/skipAd", function (req, res) {
+  console.log("in here");
+  res.writeHead(200, {'Content-Type' : 'image/png'});
+  res.end("");
+});
+
