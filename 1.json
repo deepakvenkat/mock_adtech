@@ -1,0 +1,308 @@
+{
+  "id": "1",
+  "created": "2013-11-01T15:37:33UTC",
+  "lastModified": "2013-11-01T15:37:33UTC",
+  "name": "Argentinian Mate",
+  "description": "http://en.wikipedia.org/wiki/Mate_(beverage)",
+  "exhibited": 0,
+  "realized": 0,
+  "link": {
+    "rel": "self",
+    "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/surveys/1"
+  },
+  "audience": {
+    "id": "5273cabde4b018629e2a1ac3",
+    "created": "2013-11-01T15:37:33UTC",
+    "lastModified": "2013-11-01T15:37:33UTC",
+    "country": "All",
+    "filter_type": 2,
+    "screening_question": {
+      "id": "5273cabde4b018629e2a1ac4",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "screening question",
+      "order": "2",
+      "choice": 0,
+      "completed": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/questions/5273cabde4b018629e2a1ac4"
+      },
+      "answers": [{
+        "id": "5273cabde4b018629e2a1ac5",
+        "created": "2013-11-01T15:37:33UTC",
+        "lastModified": "2013-11-01T15:37:33UTC",
+        "text": "a1",
+        "flagged": false,
+        "pinned": false,
+        "choice": 0,
+        "pixels": ["p1", "p2"],
+        "link": {
+          "rel": "self",
+          "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273cabde4b018629e2a1ac5"
+        },
+        "selected": 0
+      }, {
+        "id": "5273cabde4b018629e2a1ac6",
+        "created": "2013-11-01T15:37:33UTC",
+        "lastModified": "2013-11-01T15:37:33UTC",
+        "text": "a2",
+        "flagged": true,
+        "pinned": true,
+        "choice": 0,
+        "pixels": ["p1", "p2"],
+        "link": {
+          "rel": "self",
+          "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273cabde4b018629e2a1ac6"
+        },
+        "selected": 0
+      }, {
+        "id": "5273cabde4b018629e2a1ac7",
+        "created": "2013-11-01T15:37:33UTC",
+        "lastModified": "2013-11-01T15:37:33UTC",
+        "text": "a3",
+        "flagged": false,
+        "pinned": false,
+        "choice": 0,
+        "pixels": ["p1", "p2"],
+        "link": {
+          "rel": "self",
+          "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273cabde4b018629e2a1ac7"
+        },
+        "selected": 0
+      }]
+    }
+  },
+  "questions": [{
+    "id": "51a3bb23e4b02ecd8bf5229e",
+    "created": "2013-11-01T15:37:33UTC",
+    "lastModified": "2013-11-01T15:37:33UTC",
+    "text": "Q1",
+    "order": "2",
+    "choice": 1,
+    "completed": 0,
+    "link": {
+      "rel": "self",
+      "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/questions/51a3bb23e4b02ecd8bf5229e"
+    },
+    "answers": [{
+      "id": "5273c291e4b018629e2a1aa9",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a1",
+      "pinned": false,
+      "choice": 0,
+      "pixels": ["p1", "p2"],
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1aa9"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1aaa",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a2",
+      "pinned": true,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1aaa"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1aab",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a3",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1aab"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1aac",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a4",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1aac"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1aad",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a5",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1aad"
+      },
+      "selected": 0
+    }, {
+      "id": "5273cabde4b018629e2a1ac2",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "None of the above",
+      "pinned": false,
+      "choice": 1,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273cabde4b018629e2a1ac2"
+      },
+      "selected": 0
+    }]
+  }, {
+    "id": "51d71d3ce4b0b320b045033c",
+    "created": "2013-11-01T15:37:33UTC",
+    "lastModified": "2013-11-01T15:37:33UTC",
+    "text": "Q2",
+    "choice": 0,
+    "completed": 0,
+    "link": {
+      "rel": "self",
+      "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/questions/51d71d3ce4b0b320b045033c"
+    },
+    "answers": [{
+      "id": "5273c291e4b018629e2a1aaf",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a1",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1aaf"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1ab0",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a2",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab0"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1ab1",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a3",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab1"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1ab2",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a4",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab2"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1ab3",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a5",
+      "pinned": true,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab3"
+      },
+      "selected": 0
+    }]
+  }, {
+    "id": "51d71d64e4b0b320b0450340",
+    "created": "2013-11-01T15:37:33UTC",
+    "lastModified": "2013-11-01T15:37:33UTC",
+    "text": "Q3",
+    "choice": 0,
+    "completed": 0,
+    "link": {
+      "rel": "self",
+      "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/questions/51d71d64e4b0b320b0450340"
+    },
+    "answers": [{
+      "id": "5273c291e4b018629e2a1ab4",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a1",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab4"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1ab5",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a2",
+      "pinned": true,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab5"
+      },
+      "selected": 0
+    }]
+  }, {
+    "id": "51d71d64e4b0b320b0450344",
+    "created": "2013-11-01T15:37:33UTC",
+    "lastModified": "2013-11-01T15:37:33UTC",
+    "text": "Q4",
+    "choice": 0,
+    "completed": 0,
+    "link": {
+      "rel": "self",
+      "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/questions/51d71d64e4b0b320b0450344"
+    },
+    "answers": [{
+      "id": "5273c291e4b018629e2a1ab6",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a1",
+      "pinned": false,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab6"
+      },
+      "selected": 0
+    }, {
+      "id": "5273c291e4b018629e2a1ab7",
+      "created": "2013-11-01T15:37:33UTC",
+      "lastModified": "2013-11-01T15:37:33UTC",
+      "text": "a2",
+      "pinned": true,
+      "choice": 0,
+      "link": {
+        "rel": "self",
+        "href": "http://lb.dev.cun.bzgint.com/surveyDev/v1/answers/5273c291e4b018629e2a1ab7"
+      },
+      "selected": 0
+    }]
+  }],
+  "confirmed": 1
+}

@@ -120,3 +120,19 @@ db.students.aggregate([
   {$sort: {avg_score: -1}}
   ])
 
+
+  "city" : "ACMAR",
+  "loc" : [
+    -86.51557,
+    33.584132
+  ],
+  "pop" : 6055,
+  "state" : "AL",
+  "_id" : "35004"
+
+db.zips.aggregate([
+  {$project: {"city":1, "pop": 1, "state": 1, "_id": 1, first_char: {$substr: ["$city", 0, 1]}}},
+  {$match: {first_char: /^\d.*$/}},
+  {$group: {_id: 0, sum_pop: {$sum: "$pop"}}}
+  ])
+

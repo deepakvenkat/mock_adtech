@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VAST version="2.0">
-    <Ad id="4229684">
-        <InLine>
-            <AdSystem>BrandSelect</AdSystem>
-            <AdTitle>RadarOnline_BS_Container_4229684</AdTitle>
-            <Impression><![CDATA[http://pix.genesismedia.com/contimp.png?RadarOnline_BS_Container_4229684^4229684^22523213^2802985]]></Impression>
-            <Impression>
-                     <![CDATA[]]>
-      </Impression>
-            <Impression>
-                     <![CDATA[http://ad.crwdcntrl.net/4/to=y|c=1890|p=4648|rand=11032885]]>
-            </Impression>
-            <Creatives>
-                <Creative AdID="4229684">
-                    <Linear>
-                        <Duration>00:00:60</Duration>
-                        <TrackingEvents>
-                        </TrackingEvents>
-                        <VideoClicks>
-                            <ClickTracking><![CDATA[http://adserver.adtechus.com/adlink/5372/2802985/0/16/AdId=4229684;BnId=4;itime=11032885;nodecode=yes;link=]]></ClickTracking>
-                        </VideoClicks>
-                        <MediaFiles>
-                            <MediaFile type="application/x-shockwave-flash" apiFramework="VPAID" delivery="progressive" width="640" height="480"  maintainAspectRatio="true">
-                                <![CDATA[http://d2qyyy30tr7ear.cloudfront.net/swf/brandselect.swf?backgroundUrl=&adXmlUrl=http://adserver.adtechus.com/addyn|3.0|5372|2802983|0|16|ADTECH;loc=100;noperf=1;target=_blank;misc=11032885&adXmlUrl2=&defaultAdXmlUrl=http://adserver.adtechus.com/addyn|3.0|5372|2807799|0|16|ADTECH;loc=100;noperf=1;target=_blank;misc=11032885&timeout=12&directToDefault=false&bannerDuration=0&viewstart=http://adserver.adtechus.com/adcount/3.0/5372/2802985/0/16/AdId=4229684;BnId=4;ct=1568087884;st=950;adcid=1;itime=11032885;reqtype=25;&scaleBanner=true&bannerMessage= &ad1Message=&ad2Message=&thumbnailMode=None]]>
-                            </MediaFile>
-                        </MediaFiles>
-                    </Linear>
-                </Creative>
-            </Creatives>
-        </InLine>
-    </Ad>
+<Ad id="4431172">
+<InLine>
+<AdSystem>AdTech</AdSystem>
+<AdTitle>NORELCO_CUTEST_PID7110636_4431172</AdTitle>
+<Impression/>
+<Creatives>
+<Creative AdID="4431172">
+<Linear>
+<Duration>00:00:18</Duration>
+<TrackingEvents></TrackingEvents>
+<MediaFiles>
+<MediaFile delivery="progressive" type="video/x-flv" width="640" height="360" scalable="true" maintainAspectRatio="true">
+<!-- http://demo-support-files.s3.amazonaws.com/smithsonian-survey_cu/JetBlue%20-%20Cubicle%20_15%28480p_H.264-AAC%29.flv -->
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
 </VAST>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="2.0">
+<Ad id="40345449">
+<InLine>
+<AdSystem>MAD</AdSystem>
+<AdTitle>
+<![CDATA[ GRBG ]]>
+</AdTitle>
+<Impression>
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=impression&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Impression>
+<Impression>
+<![CDATA[
+http://ad.doubleclick.net/ad/N3340.928084.GENESISMEDIA/B7725801;sz=1x1;pc=%5BTPAS_ID%5D;ord=1381861504907?
+]]>
+</Impression>
+<Impression>
+<![CDATA[
+http://d.p-td.com/r/di/id/L21rdC80L21waWQvMjYxNzczODU/segid/-99/advid/3120738/ioid/%5Binsertion_order_id%5D/pkgid/%5Bpackage_id%5D/crid/%5Bcreative_id%5D
+]]>
+</Impression>
+<Impression>
+<![CDATA[
+http://d.agkn.com/pixel/2156/?che=%n&advid=%eaid!&plaid=3690&creid=14843&camid=435&sid=%esid!
+]]>
+</Impression>
+<Impression>
+<![CDATA[
+http://ohlone.vizu.com/a.gif?vzcid=7668&vzadid=nonpersonalized&vzsid=eyeview&ord=1381861504907
+]]>
+</Impression>
+<Creatives>
+<Creative AdID="3690" id="40345449">
+<Linear>
+<Duration>00:00:15</Duration>
+<TrackingEvents>
+<Tracking event="start">
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=start&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Tracking>
+<Tracking event="firstQuartile">
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=firstQuartile&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Tracking>
+<Tracking event="midpoint">
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=midpoint&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Tracking>
+<Tracking event="thirdQuartile">
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=thirdQuartile&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Tracking>
+<Tracking event="complete">
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=complete&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Tracking>
+<Tracking event="close">
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=close&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Tracking>
+<Tracking event="acceptInvitation">
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=acceptInvitation&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</Tracking>
+</TrackingEvents>
+<VideoClicks>
+<ClickThrough>
+<![CDATA[
+http://www.lowes.com/cd_heating+cooling+promotions_849131093_%20?cm_mmc=DisplaySpring-_-HeatingCooling-_-BBDO-_-Air_Filters
+]]>
+</ClickThrough>
+<ClickTracking>
+<![CDATA[
+http://beacon.eyeviewads.com/1.gif?ev=clicktracking&madid=3690&adid=40345449&trid=19996&origintrid=21726&uip=98.116.14.130&tyld=GRBG&uid=d25fa2cfc129e790&madhashid=ad0276cc&did=14843&rfv=7&asv=2795&adp=VAST2&iid=ef7b479f238d7184fa40a4b977922159&rt=1381861504907
+]]>
+</ClickTracking>
+<ClickTracking>
+<![CDATA[
+http://d.p-td.com/r/dc/id/L21rdC80L21waWQvMjYxNzczODU/segid/-99/advid/3120738/ioid/435/pkgid/3690/crid/14843/url/
+]]>
+</ClickTracking>
+<ClickTracking>
+<![CDATA[
+http://ad.doubleclick.net/clk;273338361;99216002;e;pc=%5BTPAS_ID%5D?
+]]>
+</ClickTracking>
+</VideoClicks>
+<MediaFiles>
+<MediaFile type="video/mp4" delivery="progressive" width="640" height="360" bitrate="700" scalable="true" maintainAspectRatio="true">
+<![CDATA[
+http://ads.eyeviewads.com/14843/40345449/868c27c7-42b1-4f79-a52c-46ff92cca4d5.mp4
+]]>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+</VAST>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="vast.xsd">
+<Ad id="276400953">
+<InLine>
+<AdSystem version="2.0">DART_DFA</AdSystem>
+<AdTitle>In-Stream Video</AdTitle>
+<Description/>
+<Survey/>
+<Impression id="DART">
+<![CDATA[
+http://ad.doubleclick.net/imp;v7;x;276400953;1-0;0;103575714;0/0;55936073/55825379/1;;~cs=d%3fhttp://s0.2mdn.net/dot.gif?922025
+]]>
+</Impression>
+<Creatives>
+<Creative sequence="1" AdID="">
+<Linear>
+<Duration>00:00:15</Duration>
+<TrackingEvents>
+<Tracking event="start">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=11;ecn1=1;etm1=0;
+]]>
+</Tracking>
+<Tracking event="midpoint">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=18;ecn1=1;etm1=0;
+]]>
+</Tracking>
+<Tracking event="firstQuartile">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=26;ecn1=1;etm1=0;
+]]>
+</Tracking>
+<Tracking event="thirdQuartile">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=27;ecn1=1;etm1=0;
+]]>
+</Tracking>
+<Tracking event="complete">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=13;ecn1=1;etm1=0;
+]]>
+</Tracking>
+<Tracking event="mute">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=16;ecn1=1;etm1=0;
+]]>
+</Tracking>
+<Tracking event="pause">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=15;ecn1=1;etm1=0;
+]]>
+</Tracking>
+<Tracking event="fullscreen">
+<![CDATA[
+http://ad.doubleclick.net/activity;src=3876771;met=1;v=1;pid=103575714;aid=276400953;ko=0;cid=55936073;rid=55825379;rv=1;timestamp=922025;eid1=19;ecn1=1;etm1=0;
+]]>
+</Tracking>
+</TrackingEvents>
+<AdParameters/>
+<VideoClicks>
+<ClickThrough>
+<![CDATA[
+http://www.chevrolet.com/silverado-1500-pickup-truck/silverado-vs-all.html?cmp=OLA_DISPLAY_7888634_103575714_276400953_55936073
+]]>
+</ClickThrough>
+<ClickTracking id="DART">
+<![CDATA[
+http://ad.doubleclick.net/click%3Bh%3Dv8/3e7c/3/0/%2a/a%3B276400953%3B1-0%3B0%3B103575714%3B255-0/0%3B55936073/55825379/1%3B%3B%7Esscs%3D%3fhttp://s0.2mdn.net/dot.gif
+]]>
+</ClickTracking>
+</VideoClicks>
+<MediaFiles>
+<MediaFile id="1" delivery="progressive" type="video/x-flv" bitrate="316" width="426" height="240">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H263_medium.flv
+]]>
+</MediaFile>
+<MediaFile id="2" delivery="progressive" type="video/x-flv" bitrate="894" width="640" height="360">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H263_high.flv
+]]>
+</MediaFile>
+<MediaFile id="3" delivery="progressive" type="video/x-flv" bitrate="728" width="640" height="360">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H264_medium.flv
+]]>
+</MediaFile>
+<MediaFile id="4" delivery="progressive" type="video/x-flv" bitrate="1063" width="854" height="480">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H264_high.flv
+]]>
+</MediaFile>
+<MediaFile id="5" delivery="progressive" type="video/mp4" bitrate="673" width="640" height="360">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_138004786119031_B264.mp4
+]]>
+</MediaFile>
+<MediaFile id="6" delivery="progressive" type="video/mp4" bitrate="2403" width="1280" height="720">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H264_720P.mp4
+]]>
+</MediaFile>
+<MediaFile id="7" delivery="progressive" type="video/3gpp" bitrate="75" width="176" height="144">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_MPEG_4SP.3gp
+]]>
+</MediaFile>
+<MediaFile id="8" delivery="progressive" type="video/3gpp" bitrate="220" width="320" height="180">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_4SP_high.3gp
+]]>
+</MediaFile>
+<MediaFile id="9" delivery="progressive" type="video/webm" bitrate="803" width="640" height="360">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_VP8_medium.webm
+]]>
+</MediaFile>
+<MediaFile id="10" delivery="progressive" type="video/webm" bitrate="1149" width="854" height="480">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_VP8_high.webm
+]]>
+</MediaFile>
+<MediaFile id="11" delivery="progressive" type="video/webm" bitrate="2854" width="1280" height="720">
+<![CDATA[
+http://gcdn.2mdn.net/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_VP8_720P.webm
+]]>
+</MediaFile>
+<MediaFile id="12" delivery="streaming" type="video/x-flv" bitrate="316" width="426" height="240">
+<![CDATA[
+rtmp://rmcdn.f.2mdn.net/ondemand/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H263_medium.flv
+]]>
+</MediaFile>
+<MediaFile id="13" delivery="streaming" type="video/x-flv" bitrate="894" width="640" height="360">
+<![CDATA[
+rtmp://rmcdn.f.2mdn.net/ondemand/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H263_high.flv
+]]>
+</MediaFile>
+<MediaFile id="14" delivery="streaming" type="video/x-flv" bitrate="728" width="640" height="360">
+<![CDATA[
+rtmp://rmcdn.f.2mdn.net/ondemand/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H264_medium.flv
+]]>
+</MediaFile>
+<MediaFile id="15" delivery="streaming" type="video/x-flv" bitrate="1063" width="854" height="480">
+<![CDATA[
+rtmp://rmcdn.f.2mdn.net/ondemand/MotifFiles/html/3876771/2014_Silverado1500__JustMe_Video_US_ENG_v1_15_138005582820222_H264_high.flv
+]]>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+<Creative sequence="1" AdID="">
+<CompanionAds>
+<Companion id="1" width="160" height="600">
+<StaticResource creativeType="image/jpeg">
+<![CDATA[
+http://s0.2mdn.net/3876771/PID_2723888_1380041465000_2014_Silverado_1500_SVA_FuelEfficiency_OLA_160x600_v2_ENG.jpg
+]]>
+</StaticResource>
+<CompanionClickThrough>
+<![CDATA[
+http://ad.doubleclick.net/activity;src%3D3876771%3Bmet%3D1%3Bv%3D1%3Bpid%3D103575714%3Baid%3D276400953%3Bko%3D0%3Bcid%3D55936073%3Brid%3D55825379%3Brv%3D1%3Bcs%3Dp%3Beid1%3D28%3Becn1%3D1%3Betm1%3D0%3B_dc_redir%3Durl%3fhttp://ad.doubleclick.net/click%3Bh%3Dv8/3e7c/3/0/%2a/a%3B276400953%3B1-0%3B0%3B103575714%3B255-0/0%3B55936073/55825379/1%3B%3B%7Esscs%3D%3fhttp://www.chevrolet.com/silverado-1500-pickup-truck/silverado-vs-all.html?cmp=OLA_DISPLAY_7888634_103575714_276400953_55936073
+]]>
+</CompanionClickThrough>
+<AltText/>
+<AdParameters/>
+</Companion>
+</CompanionAds>
+</Creative>
+</Creatives>
+<Extensions>
+<Extension type="DART">
+<AdServingData>
+<DeliveryData>
+<GeoData>
+<![CDATA[ ct=US&st=NY&ac=212&zp=10010&bw=4&dma=3&city=13275 ]]>
+</GeoData>
+</DeliveryData>
+</AdServingData>
+</Extension>
+</Extensions>
+</InLine>
+</Ad>
+</VAST>
