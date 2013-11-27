@@ -24,10 +24,10 @@ app.get("/ads:id", function (req, res) {
   // console.log(query);
   var query = req.params.id;
   var params = query.split(';');
-  var rand = 7//Math.random();
+  var rand = Math.random();
   if(rand % 7 === 0){
     console.log("random failure");
-    res.send("var a = 'blah'");
+    res.send("var a= 'blah'");
     return;
   }
   if (params.indexOf("KVcurrent_ad=1") > -1/*query.current_ad === "1"*/) {
@@ -60,6 +60,7 @@ app.get("/alternative_ad:id", function (req, res) {
   // var query = url_parts.query;
   // console.log(query);
   var query = req.params.id;
+  console.log(query)
   var params = query.split(';');
   var rand = Math.random();
   if(rand % 7 === 0){
@@ -136,6 +137,18 @@ app.get("/vpaid_single:id", function (req, res) {
     }
   });
 });
+
+app.get("/external_player:id", function (req, res) {
+  fs.readFile("external_player.js", function (error, file) {
+    if(error)
+      console.log(error);
+    else {
+      res.writeHead(200, {'Content-Type': 'application/xml'});
+      res.end(file);
+    }
+  });
+});
+
 
 app.get("/vast", function (req, res) {
   fs.readFile("vast.xml", function (error, file) {
@@ -259,7 +272,6 @@ app.get("/leave_behind:id", function (req, res) {
   });
 });
 app.get("/skipAd", function (req, res) {
-  console.log("in here");
   res.writeHead(200, {'Content-Type' : 'image/png'});
   res.end("");
 });

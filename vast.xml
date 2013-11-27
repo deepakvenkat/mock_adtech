@@ -12,7 +12,7 @@
 <TrackingEvents></TrackingEvents>
 <MediaFiles>
 <MediaFile delivery="progressive" type="video/x-flv" width="640" height="360" scalable="true" maintainAspectRatio="true">
-<!-- http://demo-support-files.s3.amazonaws.com/smithsonian-survey_cu/JetBlue%20-%20Cubicle%20_15%28480p_H.264-AAC%29.flv -->
+http://demo-support-files.s3.amazonaws.com/smithsonian-survey_cu/JetBlue%20-%20Cubicle%20_15%28480p_H.264-AAC%29.flv
 </MediaFile>
 </MediaFiles>
 </Linear>

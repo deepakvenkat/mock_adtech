@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>ViralGains Player Embedded</title>
+        <script type='text/javascript' src='scripts/jquery.1.7.1.min.js'></script>
+        <script type='text/javascript' src='scripts/jquery.validate.min.js'></script>
+        <script type='text/javascript' src='scripts/jquery-ui.js'></script>
+        <script type="text/javascript" src="scripts/swfobject.js"></script>
+        <style type="text/css">
+            body {
+                border: 0px;
+                margin: 0px;
+                padding: 0px;
+                height: 100%;
+                background: #000000;
+            }
+            .clearfix:after {
+                content: ".";
+                display: block;
+                clear: both;
+                visibility: hidden;
+                line-height: 0;
+                height: 0;
+            }
+
+            .clearfix {
+                display: inline-block;
+            }
+
+            html[xmlns] .clearfix {
+                display: block;
+            }
+
+            * html .clearfix {
+                height: 1%;
+            }
+            .contest-form { display:none; left:50px; top:50px; width:340px; position:absolute; background:#fff; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;border:1px solid #d8d8d8;}
+            .contest-form .close{ position:absolute; right:-6px; top:-7px; z-index:999;}
+            .contest-form .title{ background:url(images/title-bg.png) 0 0 repeat-x; height:38px; line-height:38px; color:#333; font-size:12px; padding:0px 8px; border-bottom:1px solid #d8d8d8; font-weight:bold;     }
+            .contest-form .inner{ padding:10px; padding-bottom: 0px;}
+            .contest-form ul{ margin:0px; padding:0px; list-style:none;}
+            .contest-form ul li{ padding:0px; margin:0px; list-style:none; margin-bottom:7px;}
+            .contest-form  label{ display:block; float:left; width:80px; font-size:11px; color:#333; line-height:18px; }
+            .contest-form  input[type="text"] { float:right; width:80px; border:1px solid #cacaca; height:16px; line-height:16px; padding:0px 5px; color:#999; font-size:11px; background:url(images/textbox.png) 0 0 repeat-x;}
+            .contest-form  select { border:1px solid #cacaca; height:18px; line-height:18px;  color:#999; font-size:9px; background:url(images/textbox.png) 0 0 repeat-x; }
+            .contest-form ul li.dob span{ display:block; float:left;}
+            .contest-form ul li span.date select{ width:46px; margin-right:4px;}
+            .contest-form ul li span.month select{width:89px; margin-right:4px;}
+            .contest-form ul li span.year select{width:69px; margin-right:4px;}
+            .contest-form ul li.submit{ border-top:1px solid #ededed; padding:2px 0;}
+            .contest-form ul li.submit input[type="submit"]{ font-size: 12px; margin-top:10px; cursor:pointer; background:url(images/enter-btn.png) 0 0 no-repeat; height:26px; line-height:26px; padding-bottom:5px; width:144px; text-align:center; color:#fff; text-shadow:0px 1px 0px #c36b0b; float:right; border:0px;}
+        </style>
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <style type="text/css">
+            .ui-datepicker {font-size: 10px!important;}
+        </style>
+        <script type="text/javascript">
+            var ViralGains = {
+                log:function (data) {
+                    try {
+                        console.log(data);
+                    } catch (c) {
+                        //Console not enabled!!
+                    }
+                },
+                integrations:{
+                    isLoaded:false,
+                    isPlayed:false,
+                    isFinished:false,
+                    onLoadHandlers:[],
+                    onPlayHandlers:[],
+                    onFinishHandlers:[],
+                    addOnLoadHandler:function (code) {
+                        if (ViralGains.integrations.isLoaded) {
+                            ViralGains.integrations.process(code);
+                        } else {
+                            ViralGains.integrations.onLoadHandlers.push(code);
+                        }
+                    },
+                    addOnPlayHandler:function (code) {
+                        if (ViralGains.integrations.isPlayed) {
+                            ViralGains.integrations.process(code);
+                        } else {
+                            ViralGains.integrations.onPlayHandlers.push(code);
+                        }
+                    },
+                    addOnFinishHandler:function (code) {
+                        if (ViralGains.integrations.isFinished) {
+                            ViralGains.integrations.process(code);
+                        } else {
+                            ViralGains.integrations.onFinishHandlers.push(code);
+                        }
+                    },
+                    event:{
+                        onLoad:function () {
+                            ViralGains.integrations.isLoaded = true;
+                            for (var idx in ViralGains.integrations.onLoadHandlers) {
+                                ViralGains.integrations.process(ViralGains.integrations.onLoadHandlers[idx]);
+                            }
+                        },
+                        onPlay:function () {
+                            ViralGains.integrations.isPlayed = true;
+                            for (var idx in ViralGains.integrations.onPlayHandlers) {
+                                ViralGains.integrations.process(ViralGains.integrations.onPlayHandlers[idx]);
+                            }
+                        },
+                        onFinish:function () {
+                            ViralGains.integrations.isFinished = true;
+                            for (var idx in ViralGains.integrations.onFinishHandlers) {
+                                ViralGains.integrations.process(ViralGains.integrations.onFinishHandlers[idx]);
+                            }
+                        }
+                    },
+                    process:function (code) {
+                        try {
+                            eval(code);
+                        } catch (c) {
+                            ViralGains.log("[iProcessError] Error while processing code:   " + code);
+                            ViralGains.log(c);
+                            window.iProcessError = c;
+                        }
+                    },
+                    init:function () {
+                        jQuery.ajax({
+                            type:'GET',
+                            url:"https://playerserver.viralgains.com/getIntegrationCodesForVideo.cgi",
+                            data:{
+                                videoId:ViralGains.player.opts.videoId
+                            },
+                            contentType:"application/json",
+                            jsonp:"callback",
+                            dataType:'jsonp',
+                            success:function (resp) {
+                                for (var idx in resp) {
+                                    if (typeof(resp[idx]["onLoadVideo"]) != 'undefined') {
+                                        ViralGains.integrations.addOnLoadHandler(resp[idx]["onLoadVideo"]);
+                                        ViralGains.integrations.addOnPlayHandler(resp[idx]["onPlayVideo"]);
+                                        ViralGains.integrations.addOnFinishHandler(resp[idx]["onFinishVideo"]);
+                                    }
+                                }
+                            }
+                        });
+                    }
+                },
+                player:{
+                    ytplayer:null,
+                    ifPlayer:null,
+                    viewed:false,
+                    ended:false,
+                    embed:{
+                        params:{
+                            allowScriptAccess:"always",
+                            allowFullScreen:"true",
+                            wmode:"transparent",
+                            bgcolor:"#cccccc"
+                        },
+                        atts:{
+                            id:"myytplayer"
+                        }
+                    },
+                    opts:{
+                        height:400,
+                        width:600,
+                        videoId:"",
+                        data:"",
+                        OnPlay:"",
+                        OnComplete:"",
+                        partnerSite:"https://viralgains.com/"
+                    },
+                    postMessageToParentWindow : function(messageForParentFrame){
+                        var indexPlayerWindow=window.parent;
+                        var parentWrapperWindow=indexPlayerWindow.parent;
+                        parentWrapperWindow.postMessage(messageForParentFrame,"*");
+                    },
+                    onYouTubePlayerReady:function (pId) {
+                        ViralGains.player.ytplayer = document.getElementById("myytplayer");
+                        ViralGains.player.ytplayer.addEventListener("onStateChange", "ViralGains.player.onYtPlayerStateChange");
+                        var messageForParentFrame={"playerStatus":"ext_init", videoId : window.playerOpts.videoId};
+                        ViralGains.player.postMessageToParentWindow(messageForParentFrame);
+                    },
+                    parsePlayerOpts:function () {
+                        var loc = window.location.href;
+                        loc = loc.replace(/^.*\?/i, "");
+                        loc = loc.split("&");
+                        for (var index in loc) {
+                            var tokens = loc[index].split("=");
+                            ViralGains.player.opts[tokens[0]] = tokens[1];
+                        }
+                        ViralGains.player.opts.partnerSite = decodeURIComponent(ViralGains.player.opts.partnerSite);
+                        window.playerOpts = ViralGains.player.opts;
+                    },
+                    api:{
+                        firePixel:function (url) {
+                            ViralGains.log("[ViralGains] Firing Pixel: " + url);
+                            var img = document.createElement("img");
+                            img.src = url;
+                            img.setAttribute("src",url);
+                            img.style.position = "absolute";
+                            img.style.top = "0";
+                            img.style.left = "0";
+                            img.style.zIndex = "-1";
+                            img.setAttribute("alt"," ");
+                            try {
+                                document.getElementsByTagName("body")[0].appendChild(img);
+                            } catch (c) {
+                                ViralGains.log("[iPixelFireError] Error while firing pixel: " + url);
+                                ViralGains.log(c);
+                                window.iPixelFireError = c;
+                            }
+                        },
+                        addEvent:function (obj, evt, fn) {
+                            if (obj.addEventListener) {
+                                obj.addEventListener(evt, fn, false);
+                            }
+                            else if (obj.attachEvent) {
+                                obj.attachEvent("on" + evt, fn);
+                            }
+                        },
+                        padWithZero:function (str) {
+                            var s = parseInt(str, 10);
+                            return (s < 9 ? "0" + s : s + "");
+                        },
+                        convertDateToUTC:function (date) {
+                            return  (ViralGains.player.api.padWithZero(date.getUTCDate()) + "-" + ViralGains.player.api.padWithZero(date.getUTCMonth() + 1) + "-" + date.getUTCFullYear());
+                        },
+                        showIframe:function (url) {
+                            window.parent.showIframeOnPlayer(url);
+                        }
+                    },
+                    reportViewToVariousServers:function () {
+                        jQuery.ajax({
+                            type:'GET',
+                            url:"https://playerserver.viralgains.com/reportView.cgi",
+                            data:{
+                                date:ViralGains.player.api.convertDateToUTC(new Date()),
+                                partnerSite:ViralGains.player.opts.partnerSite,
+                                videoId:ViralGains.player.opts.videoId,
+                                userBrowser:(function () {
+                                    try {
+                                        var N = navigator.appName, ua = navigator.userAgent, tem;
+                                        var M = ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+                                        if (M && (tem = ua.match(/version\/([\.\d]+)/i)) != null) M[2] = tem[1];
+                                        M = M ? [M[1], M[2]] : [N, navigator.appVersion, '-?'];
+                                        return M.toString();
+                                    } catch (e) {
+                                        return "NA"
+                                    }
+                                })()
+                            },
+                            async:false,
+                            contentType:"application/json",
+                            dataType:'jsonp'
+                        });
+                        ViralGains.integrations.event.onPlay();
+                    },
+                    onYtPlayerStateChange:function (newState) {
+                        if (newState == 1 && !ViralGains.player.viewed) {
+                            ViralGains.player.reportViewToVariousServers();
+                            ViralGains.player.viewed = true;
+                            var messageForParentFrame={"playerStatus":"ext_play", videoId : window.playerOpts.videoId};
+                            ViralGains.player.postMessageToParentWindow(messageForParentFrame);
+                        }
+                        if (newState == 0 && !ViralGains.player.ended) {
+                            ViralGains.player.ended = true;
+                            ViralGains.integrations.event.onFinish();
+                            ViralGains.player.leadCapture();
+//                            ViralGains.player.emailCapture();
+                        }
+                    },
+                    leadCapture: function () {
+                        jQuery.ajax({
+                            type:'GET',
+                            url:"https://playerserver.viralgains.com/getLeadCaptureCodes.cgi",
+                            data:{
+                                videoId:ViralGains.player.opts.videoId
+                            },
+                            contentType:"application/json",
+                            jsonp:"callback",
+                            dataType:'jsonp',
+                            success:function (resp) {
+                                try {
+                                    var redisValuesArray = resp[0].onFinishVideo.split(',');
+                                    if (redisValuesArray[0].indexOf("true") != -1) {
+                                        var isFullName = redisValuesArray[1].indexOf("true") != -1;
+                                        var isStreetAddress = redisValuesArray[2].indexOf("true") != -1;
+                                        var isCityState = redisValuesArray[3].indexOf("true") != -1;
+                                        var isZip = redisValuesArray[4].indexOf("true") != -1;
+                                        var isDob = redisValuesArray[5].indexOf("true") != -1;
+                                        var isEmail = redisValuesArray[6].indexOf("true") != -1;
+                                        var isConfirmEmail = redisValuesArray[7].indexOf("true") != -1;
+                                        var title = redisValuesArray[8].substring(6);
+                                        var buttonTitle = redisValuesArray[9].substring(12);
+
+                                        if (!isFullName) { jQuery("#leadCaptureFullName").css("display", "none") }
+                                        if (!isStreetAddress) { jQuery("#leadCaptureStreetAddress").css("display", "none") }
+                                        if (!isCityState) { jQuery("#leadCaptureCityState").css("display", "none") }
+                                        if (!isZip) { jQuery("#leadCaptureZip").css("display", "none") }
+                                        if (!isDob) { jQuery("#leadCaptureDOB").css("display", "none") }
+                                        if (!isEmail) { jQuery("#leadCaptureEmail").css("display", "none") }
+                                        if (!isConfirmEmail) { jQuery("#leadCaptureConfirmEmail").css("display", "none") }
+                                        if (title != "") {
+                                            jQuery("#leadCaptureTitle").text(title);
+                                        } else {
+                                            jQuery("#leadCaptureTitle").text("Empty title!!!");
+                                        }
+                                        if (buttonTitle != "") {
+                                            jQuery("#win").attr("value", buttonTitle)
+                                        } else {
+                                            jQuery("#win").attr("value", "Submit")
+                                        }
+                                        jQuery("#leadCaptureImage").attr("src", "http://res.cloudinary.com/manvendraig/image/upload/c_scale,h_35,w_145/" + ViralGains.player.opts.videoId + ".jpg");
+                                        jQuery(".contest-form").css("width", ViralGains.player.opts.width - 100);
+                                        jQuery(".contest-form ul li").css("width", ViralGains.player.opts.width - 121);
+                                        jQuery('.contest-form  input[type="text"]').css("width", jQuery(".contest-form ul li").width() - 105);
+                                        $("#leadCaptureDialog").fadeIn(500); //.css("display", "block");
+
+                                        if (!isFullName && !isStreetAddress && !isCityState && !isZip && !isDob && !isEmail && !isConfirmEmail)
+                                            $("#leadCaptureDialog").css("display", "none");
+                                    }
+                                } catch (e) {
+                                    // Error in redis values for Integration15 or with videoId-Integration15
+                                }
+                            },
+                            error:function() {
+                                // console.log ("Failed to get the data from getLeadCaptureCodes.cgi script");
+                            }
+                        });
+                    },
+                    emailCapture: function() {
+                        jQuery.ajax({
+                            contentType: 'application/json',
+                            jsonp:"callback",
+                            dataType: 'jsonp',
+                            url: "https://playerserver.viralgains.com/getEmailCaptureCodes.cgi",
+                            data: {
+                                videoId: ViralGains.player.opts.videoId
+                            },
+                            success: function(resp) {
+                                var responseArray = resp[0].onFinishVideo.split(',');
+                                if (responseArray[0] === 'true') {
+                                    ViralGains.player.api.showIframe(responseArray[1]);
+                                }
+
+                            }
+                        });
+                    },
+                    iFrameAPI:{
+                        onPlayerStateChange:function (event) {
+                            if (event.data == YT.PlayerState.PLAYING && !ViralGains.player.viewed) {
+                                ViralGains.player.reportViewToVariousServers();
+                                ViralGains.player.viewed = true;
+                            }
+                            if (event.data == YT.PlayerState.ENDED && !ViralGains.player.ended) {
+                                ViralGains.player.ended = true;
+                                ViralGains.integrations.event.onFinish();
+                            }
+                        },
+                        onPlayerReady:function (event) {
+                        },
+                        stopVideo:function () {
+                            ViralGains.player.ifPlayer.stopVideo();
+                        },
+                        onYouTubeIframeAPIReady:function () {
+                            ViralGains.player.ifPlayer = new YT.Player('videoObject', {
+                                height:ViralGains.player.opts.height,
+                                width:ViralGains.player.opts.width,
+                                videoId:ViralGains.player.opts.videoId,
+                                events:{
+                                    'onReady':ViralGains.player.iFrameAPI.onPlayerReady,
+                                    'onStateChange':ViralGains.player.iFrameAPI.onPlayerStateChange
+                                }
+                            });
+                        }
+                    },
+                    init:function () {
+                        swfobject.embedSWF(
+                                "https://www.youtube.com/v/" + ViralGains.player.opts.videoId + "?version=3&enablejsapi=1&disablekb=1&showinfo=0&playerapiid=ytplayer&wmode=transparent",
+                                "videoObject",
+                                ViralGains.player.opts.width,
+                                ViralGains.player.opts.height,
+                                "8",
+                                null,
+                                null,
+                                ViralGains.player.embed.params,
+                                ViralGains.player.embed.atts
+                        );
+                        if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
+                            var tag = document.createElement('script');
+                            tag.src = "//www.youtube.com/iframe_api";
+                            var firstScriptTag = document.getElementsByTagName('script')[0];
+                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                        }
+                        ViralGains.integrations.event.onLoad()
+//                        ViralGains.player.leadCapture();
+//                        ViralGains.player.emailCapture();
+                    }
+                },
+                init:new function () {
+                    jQuery(document).ready(function () {
+                        ViralGains.constructor();
+                    });
+                },
+                constructor:function () {
+                    ViralGains.player.parsePlayerOpts();
+                    ViralGains.integrations.init();
+                    ViralGains.player.init();
+                }
+            };
+            window.onYouTubePlayerReady = ViralGains.player.onYouTubePlayerReady;
+            window.onYouTubeIframeAPIReady = ViralGains.player.iFrameAPI.onYouTubeIframeAPIReady;
+            window.showIframe = ViralGains.player.api.showIframe;
+
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#closeButton").unbind().click(function() {
+                    $("#leadCaptureDialog").fadeOut(500) //.css("display", "none");
+                    return false;
+                });
+
+                $("#leadCaptureDOBInput").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    yearRange: "1970:2013"
+                });
+
+                jQuery("#leadCaptureDialogForm").validate({
+                    rules: {
+                        leadCaptureFullNameInput: "required",
+                        leadCaptureStreetAddressInput: "required",
+                        leadCaptureCityStateInput: "required",
+                        leadCaptureZipInput: "required",
+                        leadCaptureDOBInput: "required",
+                        leadCaptureEmailInput: {
+                            required: true,
+                            email: true
+                        },
+                        leadCaptureConfirmEmailInput: {
+                            required: true,
+                            email: true,
+                            equalTo: "#leadCaptureEmailInput"
+                        }
+                    },
+                    messages: {
+                        leadCaptureFullNameInput: "",
+                        leadCaptureEmailInput: "",
+                        leadCaptureStreetAddressInput: "",
+                        leadCaptureCityStateInput: "",
+                        leadCaptureZipInput: "",
+                        leadCaptureDOBInput: "",
+                        leadCaptureEmailInput: "",
+                        leadCaptureConfirmEmailInput: ""
+                    }
+                });
+
+                $("#leadCaptureDialogForm").submit(function(e) {
+                    if (!$("#leadCaptureDialogForm").valid())
+                        return false;
+
+                    jQuery.ajax({
+                        type: "POST",
+                        crossDomain: "true",
+                        contentType: "application/json",
+                        dataType: "jsonp",
+                        url: "https://platform.viralgains.com/leadCapture/saveFormData",
+                        data: {
+                            fullName: $("#leadCaptureFullNameInput").val(),
+                            streetAddress: $("#leadCaptureStreetAddressInput").val(),
+                            cityState: $("#leadCaptureCityStateInput").val(),
+                            zip: $("#leadCaptureZipInput").val(),
+                            dob: $("#leadCaptureDOBInput").val(),
+                            email: $("#leadCaptureEmailInput").val(),
+                            confirmEmail: $("#leadCaptureConfirmEmailInput").val(),
+                            title: $("#leadCaptureTitle").text(),
+                            videoId: ViralGains.player.opts.videoId
+                        },
+                        success: function(resp) {
+                            alert("Thank you for your precious time.");
+                            $("#leadCaptureDialog").fadeOut(500); //css("display", "block");
+//                            console.log(resp)
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+//                            console.log("Error")
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="contest-form" id="leadCaptureDialog">
+            <form id="leadCaptureDialogForm">
+                <a href="javascript:void(0)" id="closeButton" name="closeButton" class="close"><img src="images/close-btn.png" /></a>
+                <div class="title" id="leadCaptureTitle" name="leadCaptureTitle">Enter to Win $1 Million Every Year for Life from Publishers Clearing House!</div>
+                <div class="inner">
+                <ul>
+                    <li class="clearfix" id="leadCaptureFullName" name="leadCaptureFullName">
+                        <label>Full Name:</label>
+                        <input type="text" id="leadCaptureFullNameInput" name="leadCaptureFullNameInput"/>
+                    </li>
+                    <li class="clearfix" id="leadCaptureStreetAddress" name="leadCaptureStreetAddress">
+                        <label>Street Address:</label>
+                        <input type="text" id="leadCaptureStreetAddressInput" name="leadCaptureStreetAddressInput"/>
+                    </li>
+                    <li class="clearfix" id="leadCaptureCityState" name="leadCaptureCityState">
+                        <label>City, State:</label>
+                        <input type="text" id="leadCaptureCityStateInput" name="leadCaptureCityStateInput"/>
+                    </li>
+                    <li class="clearfix" id="leadCaptureZip" name="leadCaptureZip">
+                        <label>Zip Code:</label>
+                        <input type="text" id="leadCaptureZipInput" name="leadCaptureZipInput"/>
+                    </li>
+                    <li class="clearfix" id="leadCaptureDOB" name="leadCaptureDOB">
+                        <label>Date of Birth:</label>
+                        <input type="text" id="leadCaptureDOBInput" name="leadCaptureDOBInput"/>
+                    </li>
+                    <li class="clearfix" id="leadCaptureEmail" name="leadCaptureEmail">
+                        <label>Email:</label>
+                        <input type="text" id="leadCaptureEmailInput" name="leadCaptureEmailInput"/>
+                    </li>
+                    <li class="clearfix" id="leadCaptureConfirmEmail">
+                        <label>Confirm Email:</label>
+                        <input type="text" id="leadCaptureConfirmEmailInput" name="leadCaptureConfirmEmailInput"/>
+                    </li>
+                    <li class="submit" style="margin-bottom: 8px">
+                        <input type="submit" id="win" value="Submit" style="background-size: 144px 26px">
+                        <img id="leadCaptureImage" name="leadCaptureImage" src="" alt="LC Image" style="margin-top: 5px"/>
+                    </li>
+                </ul>
+            </div>
+            </form>
+        </div>
+        <div id="videoObject">&nbsp;</div>
+    </body>
+</html>

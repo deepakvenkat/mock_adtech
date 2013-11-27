@@ -315,3 +315,29 @@ function cunlock_answerQuestion(answer, question) {
   var img = document.createElement('img');
   img.src = 'http://reporting.genesismedia.com/survey/v1/as/sa/' + question + '/' + answer;
 }
+
+
+cunlock_div.innerHTML += '<div id=\"embedFF7EFlkKrNw3skq\"></div>'
+
+new function() {
+  return function(p, u) {
+    document.getElementById("embedFF7EFlkKrNw3skq").innerHTML = "<iframe src=\"" + u + "?url=" + encodeURIComponent(p.u) + "&title=" + p.t + "&videoId=" + p.v + "&message=" + p.sm + "&customMessages=" + p.cm + "&partnerSite=" + encodeURIComponent(p.ps) + "&height=" + p.h + "&width=" + p.w + "&logo=" + p.l + "&shareOpts=" + p.o + "\" width=\"" + p.w + "px\" height=\"" + p.h + "px\" scrolling=\"no\" style=\"height:" + p.h + "px;width:" + p.w + "px;\" frameborder=\"0\"></iframe>";
+  }({
+    t: "Look%20Who's%20Home",
+    u: "http://www.youtube.com/watch?v=FF7EFlkKrNw",
+    v: "FF7EFlkKrNw",
+    h: 315,
+    w: 560,
+    l: 1,
+    o: "fb|tw|gplus|pt",
+    sm: "",
+    cm: "",
+    ps: window.location.href
+  }, "http://player.viralgains-2.com")
+};
+
+
+
+
+
+

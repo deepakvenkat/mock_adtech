@@ -17,6 +17,24 @@ isStartUrl = baseLocation + "is_video_start?guid="+guid;
 var cunlock_div = document.getElementById(getContentUnlockPlayerSelector());
 var JSONP_config = {"onPlaybackStartedURL": isStartUrl, "onPlaybackEndedURL" : ping_url};
 contentUnlockSetupJSONPListener(JSONP_config);
-cunlock_div.innerHTML += "<iframe src=\"http://app.videostat.com/wscript.php?p=96&v=415&javascript=false&width=400&click_key="+onPlayURL+"&offer_id="+onCompleteURL+"\" width=\"400\" height=\"440\"></iframe>";
+cunlock_div.innerHTML += '<div id=\"embedFF7EFlkKrNw3skq\"></div>'
+
+new function() {
+  return function(p, u) {
+    document.getElementById("embedFF7EFlkKrNw3skq").innerHTML = "<iframe src=\"" + u + "?url=" + encodeURIComponent(p.u) + " &title=" + p.t + "&videoId=" + p.v + "&message=" + p.sm + "&customMessages=" + p.cm + "&partnerSite=" + encodeURIComponent(p.ps) + "&height=" + p.h + "&width=" + p.w + "&logo=" + p.l +  "&OnPlay=" + onPlayURL + "&OnComplete=" + onCompleteURL +" &shareOpts=" + p.o + "\" width=\"" + p.w + "px\" height=\"" + p.h + "px\" scrolling=\"no\" style=\"height:" + p.h + "px;width:" + p.w + "px;\" frameborder=\"0\"></iframe>";
+  }({
+    t: "Look%20Who's%20Home",
+    u: "http://www.youtube.com/watch?v=FF7EFlkKrNw",
+    v: "FF7EFlkKrNw",
+    h: 315,
+    w: 560,
+    l: 1,
+    o: "fb|tw|gplus|pt",
+    sm: "",
+    cm: "",
+    ps: window.location.href
+  }, "http://player.viralgains-2.com");
+}
+
 }
 loadExternalPlayerIframe();

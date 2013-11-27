@@ -7,7 +7,7 @@ var bottom_margin = 65; //Use this variable to move the skip timer up or down. E
 setCunlockSkipButton(false, 20, bottom_margin, false, 15, "http://cunlock.localhost.com:3000/skipAd");
 
 var exclusive = false;
-var message = "";
+var message = "right";
 var skiptime = 20;
 var autoplay = false;
 

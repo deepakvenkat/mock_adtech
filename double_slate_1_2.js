@@ -1,14 +1,15 @@
 
 var initFunctionName = "initContentUnlockWithInternalPlayer";
 
-var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/3004861/0/16/AdId=4613929;BnId=1;ct=2864766660;st=6530;adcid=1;itime=201307377;reqtype=25;", false, "3", "1"];
+var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/3004861/0/16/AdId=4613929;BnId=1;ct=2864766660;st=6530;adcid=1;itime=201307377;reqtype=25;"];
 
 var bottom_margin = 65; //Use this variable to move the skip timer up or down. Eg. setting to 30 will move the skip 30px from the bottom
 
-setCunlockSkipButton(true, 5, bottom_margin, false, 130, "http://cunlock.localhost.com:3000/skipAd");
+setCunlockSkipButton(true, 5, bottom_margin, true, 130, "http://cunlock.localhost.com:3000/skipAd");
+
 
 var exclusive = false;
-var message = "";
+var message = "left";
 var skiptime = 130;
 var autoplay = false;
 
