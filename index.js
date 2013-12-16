@@ -70,7 +70,7 @@ app.get("/alternative_ad:id", function (req, res) {
   }
   console.log("alternative_ad");
   if (params.indexOf("KVcurrent_ad=1") > -1/*query.current_ad === "1"*/) {
-    fs.readFile('double_slate_with_vasts_2.js', function (error, file) {
+    fs.readFile('double_slate_1.js', function (error, file) {
       if(error)
         console.log(error);
       else {
@@ -101,7 +101,7 @@ app.get("/vast_error", function (req, res) {
 
 app.get("/survey_standalone:id", function (req, res) {
   res.writeHead(200, {'Content-Type': "text/javascript"});
-  res.end('initContentUnlockWithStandaloneSurvey("1", "12345");');
+  res.end('initContentUnlockWithStandaloneSurvey("14", "12");');
 });
 
 
@@ -139,7 +139,7 @@ app.get("/vpaid_single:id", function (req, res) {
 });
 
 app.get("/external_player:id", function (req, res) {
-  fs.readFile("external_player.js", function (error, file) {
+  fs.readFile("external_3.js", function (error, file) {
     if(error)
       console.log(error);
     else {
@@ -271,6 +271,18 @@ app.get("/leave_behind:id", function (req, res) {
     }
   });
 });
+
+app.get("/custom:id", function (req, res) {
+  fs.readFile("custom_creative.js", function (error, file) {
+    if(error)
+      console.log(error);
+    else {
+      res.writeHead(200, {'Content-Type': 'text/javascript'});
+      res.end(file);
+    }
+  });
+});
+
 app.get("/skipAd", function (req, res) {
   res.writeHead(200, {'Content-Type' : 'image/png'});
   res.end("");

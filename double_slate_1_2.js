@@ -5,8 +5,9 @@ var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adco
 
 var bottom_margin = 65; //Use this variable to move the skip timer up or down. Eg. setting to 30 will move the skip 30px from the bottom
 
-setCunlockSkipButton(true, 5, bottom_margin, true, 130, "http://cunlock.localhost.com:3000/skipAd");
+setCunlockSkipButton(true, 15, bottom_margin, true, 130, "http://cunlock.localhost.com:3000/skipAd");
 
+setCUMuteButton(true, true);
 
 var exclusive = false;
 var message = "left";
