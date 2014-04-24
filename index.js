@@ -18,6 +18,13 @@ app.get("/", function (req, res) {
 });
 
 
+app.get("/ads_error:id", function (req, res) {
+  console.log("failure");
+  res.send("var a = 'blah'");
+  return;
+});
+
+
 app.get("/ads:id", function (req, res) {
   // var url_parts = url.parse(req.url, true);
   // var query = url_parts.query;
@@ -44,7 +51,7 @@ app.get("/ads:id", function (req, res) {
       res.send("var a = 'blah'");
       return;
     }
-    fs.readFile('double_slate_with_vasts_2.js', function (error, file) {
+    fs.readFile('vast_wrapper.js', function (error, file) {
       if(error)
         console.log(error);
       else {
@@ -62,7 +69,7 @@ app.get("/alternative_ad:id", function (req, res) {
   var query = req.params.id;
   console.log(query)
   var params = query.split(';');
-  var rand = Math.random();
+  var rand = 7//Math.random();
   if(rand % 7 === 0){
     console.log("random failure");
     res.send("var a = 'blah'");
@@ -70,7 +77,7 @@ app.get("/alternative_ad:id", function (req, res) {
   }
   console.log("alternative_ad");
   if (params.indexOf("KVcurrent_ad=1") > -1/*query.current_ad === "1"*/) {
-    fs.readFile('double_slate_1.js', function (error, file) {
+    fs.readFile('double_slate_with_vasts_2.js', function (error, file) {
       if(error)
         console.log(error);
       else {
@@ -101,7 +108,7 @@ app.get("/vast_error", function (req, res) {
 
 app.get("/survey_standalone:id", function (req, res) {
   res.writeHead(200, {'Content-Type': "text/javascript"});
-  res.end('initContentUnlockWithStandaloneSurvey("14", "12");');
+  res.end('initContentUnlockWithStandaloneSurvey("12", "11");');
 });
 
 
@@ -222,7 +229,7 @@ app.get("/vast_wrapper:id", function (req, res) {
     if(error)
       console.log(error);
     else {
-      res.writeHead(200, {'Content-Type': 'application/xml'});
+      res.writeHead(200, {'Content-Type': 'text/javascript'});
       res.end(file);
     }
   });
@@ -266,7 +273,7 @@ app.get("/leave_behind:id", function (req, res) {
     if(error)
       console.log(error);
     else {
-      res.writeHead(200, {'Content-Type': 'text/javascript'});
+      res.writeHead(200, {'Content-Type': 'txt/javascript'});
       res.end(file);
     }
   });
@@ -288,6 +295,41 @@ app.get("/skipAd", function (req, res) {
   res.end("");
 });
 
+app.get("/headers", function (req, res) {
+  console.log(req.headers);
+  res.writeHead(200);
+  res.end();
+});
+
+app.get("/bs.swf", function (req, res) {
+  res.sendfile("vpaid.swf");
+});
+
+app.get("/cookieSetter", function (req, res) {
+  res.writeHead(200, {
+    'Set-Cookie' : "ahere__media=session_depth%3D14%7Cfree_views%3D2%7Cpage_locks%3D13%7Cunit_expansions%3D0%7CadStarted%3D0%7CadCompleted%3D0%7Ctotal_unlocks%3D1%7Cfree_views_after_unlocking%3D0%7Clast_lock_at%3D1396299210948%7Cbegin_date%3D1396298587293;expires=Wed, 30 Apr 2014 21:24:57 GMT;domain=genesismedia.com;path=/",
+    'Content-Type' : 'image/png'
+  });
+  res.end("");
+});
+
+app.get("/cookieGetter", function (req, res) {
+  var cookie = req.headers.cookie;
+  console.log(cookie);
+  res.writeHead(200, {
+    'Content-Type' : 'text/javascript'
+  });
+  var result = "{cookie : '"+ escape(cookie.substring(0, 14)) + "'}";
+  res.end("cookieGetterResponse(" + result + ")");
+});
+
+app.get("/demo_iframe", function (req, res) {
+  res.sendfile("demo_iframe.html");
+});
+
+app.get("/w3c/p3p.xml", function (req, res) {
+  res.sendfile("p3p.xml");
+});
 // db.messages.aggregate([
 //   {$match: {"headers.From": "andrew.fastow@enron.com", "headers.To":"jeff.skilling@enron.com"}}
 // ])
@@ -321,6 +363,34 @@ app.get("/skipAd", function (req, res) {
 //   {$sort: {'emailCount': 1}}
 // ])
 
+// db.cu_summary_aggregate_day.aggregate([{$match: {"day": /^2013-(0[7-9]|1[0-2])-..$/ig}}, {$group: {_id: null, total: {$sum: '$scriptInitiated.total'}}}]);
+// db.cu_summary_aggregate_day.aggregate([{$match: {"day": /2013-..-../ig}}, {$group: {_id: null, total: {$sum: '$scriptInitiated.total'}}}]);
 
+// db.cu_summary_aggregate_day.aggregate([{$match: {"day": /2013-..-../ig}}, {$group: {_id: null, total: {$sum: '$scriptInitiated.total'}}}]);
 
+// { "result" : [ { "_id" : null, "total" : 394569939 } ], "ok" : 1 }
+// { "result" : [ { "_id" : null, "total" : 103511873 } ], "ok" : 1 }
+// db.cu_summary_aggregate_day.aggregate([{
+//   $match: {
+//     "day": /^2013-(0[7-9]|1[0-2])-..$/ig
+//   }
+// }, {
+//   $project: {
+//     "scriptInitiated": 1,
+//     month: {
+//       "$cond": [{
+//         $eq: [{
+//           "$substr": ["$day", 5, 6]
+//         }]
+//       }]
+//     }
+//   }
+// }, {
+//   $group: {
+//     _id: "$month",
+//     total: {
+//       $sum: '$scriptInitiated.total'
+//     }
+//   }
+// }]);
 

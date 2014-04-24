@@ -4,7 +4,7 @@
 <Wrapper>
 <AdSystem>AdTech</AdSystem>
 <VASTAdTagURI>
-  <![CDATA[http://www.adotube.com/kernel/vast/vast.php?omlSource=http://www.adotube.com/php/services/player/OMLService.php?avpid=UDKjuff&ad_type=pre-rolls&platform_version=vast20as3&vpaid=1&rtb=0&publisher=adotube.com&title=[VIDEO_TITLE]&tags=[VIDEO_TAGS]&description=[VIDEO_DESCRIPTION]&videoURL=[VIDEO_FILE_URL]]]>
+  <![CDATA[http://www.adotube.com/kernel/vast/vast.php?omlSource=http://www.adotube.com/php/services/player/OMLService.php?avpid=UDKjuff&ad_type=pre-rolls&platform_version=vast2 0as3&vpaid=1&rtb=0&publisher=adotube.com&title=[VIDEO_TITLE]&tags=[VIDEO_TAGS]&description=[VIDEO_DESCRIPTION]&videoURL=[VIDEO_FILE_URL]]]>
 </VASTAdTagURI>
 <Impression><![CDATA[http://adserver.adtechus.com/adcount/3.0/5372/3006182/0/16/AdId=4661840;BnId=1;ct=233184313;st=12548;adcid=1;itime=418446279;reqtype=25;]]></Impression>
 <Creatives>

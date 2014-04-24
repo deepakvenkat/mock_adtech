@@ -18,6 +18,13 @@ http://demo-support-files.s3.amazonaws.com/smithsonian-survey_cu/JetBlue%20-%20C
 </Linear>
 </Creative>
 </Creatives>
+<Extensions>
+<Extension type="GM">
+<Trackings>
+<Tracking event="progress" value="3" amount="0.05"> <![CDATA[http://pix.genesismedia.com/billable.png?CUBS_Consolidated_VAST_Wrapper^5192728^23262028^3101984^__SLATEPARAMS__]]></Tracking>
+</Trackings>
+</Extension>
+</Extensions>
 </InLine>
 </Ad>
 </VAST>
