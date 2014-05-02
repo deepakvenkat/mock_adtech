@@ -1,11 +1,11 @@
 
 var initFunctionName = "initContentUnlockWithInternalPlayer";
 
-var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/3004861/0/16/AdId=4613929;BnId=1;ct=2864766660;st=6530;adcid=1;itime=201307377;reqtype=25;", false, 10, 1];
+var initParams = [ "url", "600", "428", true, "http://adserver.adtechus.com/adcount/3.0/5372/3004861/0/16/AdId=4613929;BnId=1;ct=2864766660;st=6530;adcid=1;itime=201307377;reqtype=25;", false, 12, 1];
 
 var bottom_margin = 65; //Use this variable to move the skip timer up or down. Eg. setting to 30 will move the skip 30px from the bottom
 
-setCunlockSkipButton(true, 3, bottom_margin, true, 130, "http://cunlock.localhost.com:3000/skipAd");
+setCunlockSkipButton(true, 20, bottom_margin, true, 130, "http://cunlock.localhost.com:3000/skipAd");
 setCUAdId("4794566");
 
 var exclusive = false;
@@ -75,3 +75,33 @@ var vast_1 = '<VAST version="2.0">\
 </InLine>\
 </Ad>\
 </VAST>';
+
+
+var cuEndSlateParams = {
+  enabled : true,
+  logoUrl : "http://d1cyvnjc1olxmw.cloudfront.net/CU%20logos/OK_USA_Logo.jpg",
+  message : "Visit us on Facebook to learn more about why we are a great brand and why you should use us.",
+  main_button : {
+    enabled : false,
+    clickThrough : "http://propelwater.com/",
+    pixel : "http://pix.genesismedia.com/endSlate.png&id=1234567",
+    text : "Find out more"
+  },
+  social_buttons : {
+    facebook : {
+      clickThrough : "https://www.facebook.com/pages/Propel-Zero/218372671515229",
+      pixel : "http://pix.genesismedia.com/endSlateSocial.png&id=1234567&social=facebook"
+    },
+    twitter : {
+      clickThrough : "https://twitter.com/Propel_Water",
+      pixel : ""
+    },
+    linkedin : {
+      clickThrough : "https://twitter.com/Propel_Water",
+      pixel : ""
+    }
+    //should be an object for each social button
+  }  
+};
+
+setCUEndSlate(cuEndSlateParams);

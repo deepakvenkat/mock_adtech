@@ -51,7 +51,7 @@ app.get("/ads:id", function (req, res) {
       res.send("var a = 'blah'");
       return;
     }
-    fs.readFile('vast_wrapper.js', function (error, file) {
+    fs.readFile('double_slate_with_vasts_2.js', function (error, file) {
       if(error)
         console.log(error);
       else {
@@ -146,7 +146,7 @@ app.get("/vpaid_single:id", function (req, res) {
 });
 
 app.get("/external_player:id", function (req, res) {
-  fs.readFile("external_3.js", function (error, file) {
+  fs.readFile("external_player.js", function (error, file) {
     if(error)
       console.log(error);
     else {

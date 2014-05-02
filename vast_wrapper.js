@@ -124,3 +124,32 @@ var vast_1 = '<VAST version="2.0">\
 </Ad>\
 </VAST>';
 
+
+var cuEndSlateParams = {
+  enabled : true,
+  logoUrl : "http://test.contentunlock.s3.amazonaws.com/proto/end-slate-only/src/propel-logo.png",
+  message : "This is the vast wrapper",
+  main_button : {
+    enabled : true,
+    clickThrough : "http://propelwater.com/",
+    pixel : "http://pix.genesismedia.com/endSlate.png&id=1234567",
+    text : "Find out more"
+  },
+  social_buttons : {
+    facebook : {
+      clickThrough : "https://www.facebook.com/pages/Propel-Zero/218372671515229",
+      pixel : "http://pix.genesismedia.com/endSlateSocial.png&id=1234567&social=facebook"
+    },
+    twitter : {
+      clickThrough : "https://twitter.com/Propel_Water",
+      pixel : ""
+    },
+    linkedin : {
+      clickThrough : "https://twitter.com/Propel_Water",
+      pixel : ""
+    }
+    //should be an object for each social button
+  }  
+};
+
+setCUEndSlate(cuEndSlateParams);

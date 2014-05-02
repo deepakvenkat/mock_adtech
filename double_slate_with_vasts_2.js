@@ -7,7 +7,7 @@ var bottom_margin = 65; //Use this variable to move the skip timer up or down. E
 setCUMuteButton(true, false);
 setCunlockSkipButton(true, 5,bottom_margin,true, 5);
 var exclusive = false;
-var message = "right";
+var message = "";
 var autoplay = false;
 
 var vast_1 = '<VAST version="2.0"><Ad id="4604357">\
@@ -16,7 +16,7 @@ var vast_1 = '<VAST version="2.0"><Ad id="4604357">\
 <AdTitle>CUBSTesting_Exclusive_Slate1only_4634357</AdTitle>\
 <Impression></Impression>\
 <Creatives>\
-<Creative AdID="4634357">\
+<Creative AdID="4604357">\
 <Linear>\
 <Duration>00:00:60</Duration>\
 <TrackingEvents>\
@@ -68,3 +68,34 @@ var vast_1 = '<VAST version="2.0"><Ad id="4604357">\
 </InLine>\
 </Ad>\
 </VAST>';
+
+var cuEndSlateParams = {
+  enabled : true,
+  logoUrl : "http://test.contentunlock.s3.amazonaws.com/proto/end-slate-only/src/propel-logo.png",
+  message : "This is not a vast wrapper",
+  main_button : {
+    enabled : true,
+    clickThrough : "http://propelwater.com/",
+    pixel : "http://pix.genesismedia.com/endSlate.png&id=1234567",
+    text : "Find out more"
+  },
+  social_buttons : {
+    facebook : {
+      clickThrough : "https://www.facebook.com/pages/Propel-Zero/218372671515229",
+      pixel : "http://pix.genesismedia.com/endSlateSocial.png&id=1234567&social=facebook"
+    },
+    twitter : {
+      clickThrough : "https://twitter.com/Propel_Water",
+      pixel : ""
+    },
+    linkedin : {
+      clickThrough : "https://twitter.com/Propel_Water",
+      pixel : ""
+    }
+    //should be an object for each social button
+  }  
+};
+
+setCUEndSlate(cuEndSlateParams);
+
+
