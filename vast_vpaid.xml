@@ -1,1 +1,50 @@
-http://www.adotube.com/kernel/vast/vast.php?omlSource=http://www.adotube.com/php/services/player/OMLService.php?avpid=UDKjuff&ad_type=pre-rolls&platform_version=vast20as3&vpaid=1&rtb=0&publisher=adotube.com&title=[VIDEO_TITLE]&tags=[VIDEO_TAGS]&description=[VIDEO_DESCRIPTION]&videoURL=[VIDEO_FILE_URL]
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="2.0">
+    <Ad id="5491336">
+        <InLine>
+            <AdSystem>AdTech</AdSystem>
+            <AdTitle>MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 </AdTitle>
+            <Impression></Impression>
+            <Creatives>
+                <Creative AdID="23491951">
+                    <Linear>
+                        <Duration>15</Duration>   
+                        <TrackingEvents>
+               <Tracking event="start"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videostart/seg=campaign^5491336^23491951^dev=iphone^3151946]]></Tracking>
+                            <Tracking event="start"><![CDATA[http://adserver.adtechus.com/adcount/3.0/5372/3151946/0/16/AdId=5491336;BnId=3;ct=327367994;st=1473;adcid=1;itime=951394710;reqtype=25;;kr16257=119136;kp=431846]]></Tracking>
+                            <Tracking event="start"><![CDATA[http://pix.genesismedia.com/a0bc.png?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="start"><![CDATA[http://b.scorecardresearch.com/p?c1=1&c2=16170130&c3=bs&c5=09&cv=2.0&cj=1]]></Tracking>
+                            <Tracking event="start"><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Impression/?creativeView-4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710&internalRedirect=true]]></Tracking>
+                            <Tracking event="start"><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Impression/?start-4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710&internalRedirect=true]]></Tracking>
+                            <Tracking event="start"><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Impression/?0-4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710&internalRedirect=true]]></Tracking>
+                            <Tracking event="firstQuartile"><![CDATA[http://pix.genesismedia.com/t25f.png?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="firstQuartile"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645531?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="firstQuartile"><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Impression/?25-4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710&internalRedirect=true]]></Tracking>
+                            
+                            <Tracking event="midpoint"><![CDATA[http://pix.genesismedia.com/f50s.png?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="midpoint"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645532?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="midpoint"><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Impression/?50-4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710&internalRedirect=true]]></Tracking>
+                            
+                            <Tracking event="thirdQuartile"><![CDATA[http://pix.genesismedia.com/s75t.png?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="thirdQuartile"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645533?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="thirdQuartile"><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Impression/?75-4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710&internalRedirect=true]]></Tracking>
+                            
+                            <Tracking event="complete"><![CDATA[http://pix.genesismedia.com/o100l.png?MECGlobal_Marriott_BusinessTraveler_CU_TESTEscalator_P1MLMF_5482182 ^5491336^23491951^3151946]]></Tracking>
+                            <Tracking event="complete"><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Impression/?100-4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710&internalRedirect=true]]></Tracking>
+                            
+                              <Tracking event="complete"><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videoend/seg=campaign^5491336^23491951^dev=iphone^3151946]]></Tracking>
+                         </TrackingEvents>
+                        <VideoClicks>
+                            <ClickTracking><![CDATA[http://adserver.adtechus.com/adlink/5372/3151946/0/16/AdId=5491336;BnId=3;itime=951394710;kr16257=119136;kp=431846;nodecode=yes;link=]]></ClickTracking>
+                            <ClickTracking><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645514^5491336^23491951^dev=iphone^3151946]]></ClickTracking>
+                            <ClickThrough><![CDATA[http://ts.vindicosuite.com/Tracking/V3/Instream/Clickthrough/?4580-151105-226509-18264-82095-undefined-1792-4875-1322-BBEEND-&iari=1517783&cb=951394710]]></ClickThrough>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile delivery="progressive" type="video/mp4" bitrate="400" width="400" height="300" scalable="true" maintainAspectRatio="true">http://d1cyvnjc1olxmw.cloudfront.net/GenesisAdvertisers/MEC%20Global/Escalator_15_MOV_NoSlate.mp4</MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>  
+</VAST>

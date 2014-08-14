@@ -23,7 +23,7 @@ var vast_1 = '<?xml version="1.0" encoding="UTF-8"?>\
 <Linear>\
 <Duration>00:00:15</Duration>\
 <MediaFiles>\
-<MediaFile apiFramework="VPAID" height="480" width="600"
+<MediaFile apiFramework="VPAID" height="480" width="600"\
 type="application/x-shockwave-flash" delivery="progressive"><![CDATA[http://objects.tremormedia.com/embed/swf/vpaidacudeo.swf?adData=http%3A//app.scanscout.com/ssframework/adStreamJSController.xml%3Fa%3Dgetadscheduleforcontent%26PI%3D449464%26scheduleVersion%3D3%26HI%3D449464|preroll|hpjzi72z1becajvpxazur%26AI%3D0%26ssCI%3D1788234%26format%3Dacudeo%26ss_acceptNonvideo%3DY%26PRI%3Dhpjzi72z-1becajvpxazur%26vpaidType%3Ddirect%26PawF%3D1&ssOI=1]]></MediaFile>\
 </MediaFiles>\
 </Linear>\

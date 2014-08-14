@@ -17,13 +17,11 @@ app.get("/", function (req, res) {
   res.send("hello world");
 });
 
-
 app.get("/ads_error:id", function (req, res) {
   console.log("failure");
   res.send("var a = 'blah'");
   return;
 });
-
 
 app.get("/ads:id", function (req, res) {
   // var url_parts = url.parse(req.url, true);
@@ -38,7 +36,55 @@ app.get("/ads:id", function (req, res) {
     return;
   }
   if (params.indexOf("KVcurrent_ad=1") > -1/*query.current_ad === "1"*/) {
+    fs.readFile('double_slate_1.js', function (error, file) {
+      if(error)
+        console.log(error);
+      else {
+        res.writeHead(200, {'Content-Type': "text/javascript"});
+        res.end(file);
+      }
+    });
+  } else if (params.indexOf("KVcurrent_ad=2") > -1 /*query.current_ad === "2"*/) {
+    if(rand % 11 === 0) {
+      res.send("var a = 'blah'");
+      return;
+    }
+    fs.readFile('double_slate_with_vasts_2.js', function (error, file) {
+      if(error)
+        console.log(error);
+      else {
+        res.writeHead(200, {'Content-Type': "text/javascript"});
+        res.end(file);
+      }
+    });
+  }
+});
+
+app.get("/screening_ads:id", function (req, res) {
+  // var url_parts = url.parse(req.url, true);
+  // var query = url_parts.query;
+  // console.log(query);
+  var query = req.params.id;
+  var params = query.split(';');
+  var rand = Math.random();
+  if(rand % 7 === 0){
+    console.log("random failure");
+    res.send("var a = 'blah'");
+    return;
+  }
+  if (params.indexOf("KVsnr=1") > -1 ) {
     fs.readFile('double_slate_1_2.js', function (error, file) {
+      if(error)
+        console.log(error);
+      else {
+        res.writeHead(200, {'Content-Type': "text/javascript"});
+        res.end(file);
+      }
+    });
+    return;
+  }
+  if (params.indexOf("KVcurrent_ad=1") > -1/*query.current_ad === "1"*/) {
+    fs.readFile('double_slate_1.js', function (error, file) {
       if(error)
         console.log(error);
       else {
@@ -102,13 +148,23 @@ app.get("/alternative_ad:id", function (req, res) {
 });
 
 app.get("/vast_error", function (req, res) {
+  console.log("in herer")
+  console.log("in herer")
   res.writeHead(200, {'Content-Type': "text/javascript"});
   res.end();
 });
 
-app.get("/survey_standalone:id", function (req, res) {
-  res.writeHead(200, {'Content-Type': "text/javascript"});
-  res.end('initContentUnlockWithStandaloneSurvey("12", "11");');
+app.get("/standalone_survey:id", function(req, res) {
+  fs.readFile("standalone_survey.js", function(error, file) {
+    if (error)
+      console.log(error);
+    else {
+      res.writeHead(200, {
+        'Content-Type': 'application/xml'
+      });
+      res.end(file);
+    }
+  });
 });
 
 
@@ -173,7 +229,7 @@ app.get("/vast_vpaid", function (req, res) {
     if(error)
       console.log(error);
     else {
-      res.writeHead(200, {'Content-Type': 'application/xml'});
+      res.writeHead(200, {'Content-Type': 'application/xml', 'Access-Control-Allow-Origin' : '*'});
       res.end(file);
     }
   });
@@ -190,6 +246,43 @@ app.get("/vast_with_wrapper", function (req, res) {
   });
 });
 
+app.get("/vast_with_default_wrapper*", function (req, res) {
+  var  reqURL = req.originalUrl;
+  var query = reqURL.indexOf(";KVpcamp");
+  if (query === -1) {
+    fs.readFile("vast_with_default_wrapper.xml", function(error, file) {
+      if (error)
+        console.log(error);
+      else {
+        res.writeHead(200, {
+          'Content-Type': 'application/xml'
+        });
+        res.end(file);
+      }
+    });
+  } else {
+    fs.readFile("vast_with_wrapper.xml", function (error, file) {
+      if(error)
+        console.log(error);
+      else {
+        res.writeHead(200, {'Content-Type': 'application/xml'});
+        res.end(file);
+      }
+    });
+  }
+});
+
+app.get("/vast_default*", function (req, res) {
+
+  fs.readFile("vast_with_default_wrapper.xml", function (error, file) {
+    if(error)
+      console.log(error);
+    else {
+      res.writeHead(200, {'Content-Type': 'application/xml'});
+      res.end(file);
+    }
+  });
+});
 app.get("/vast_media.xml", function (req, res) {
   fs.readFile("vast_media_file.xml", function (error, file) {
     if(error)

@@ -1,8 +1,8 @@
 
 //change the function name to get a wrapper
 
-var initFunctionName = "initContentUnlockWithInternalPlayer";
-var initParams = [ "url", "600", "428", true, "", false, "", ""];
+var initFunctionName = "initInternalPlayerWithWrapper";
+var initParams = [ "600", "428", true, "", false, "", ""];
 
 
 
@@ -13,7 +13,7 @@ setCunlockSkipButton(true,5,bottom_margin, 5, "http://pix.genesismedia.com/skip.
 
 cunlockSetBrandBoxMessage("CUBS VAST Wrapper",true);
 
-setCUAdId("5192728");
+setCUAdId("5192728", "1234568");
 
 
 var exclusive = false;
@@ -144,12 +144,16 @@ var cuEndSlateParams = {
       clickThrough : "https://twitter.com/Propel_Water",
       pixel : ""
     },
-    linkedin : {
+    youtube : {
       clickThrough : "https://twitter.com/Propel_Water",
       pixel : ""
     }
     //should be an object for each social button
-  }  
+  }
 };
 
 setCUEndSlate(cuEndSlateParams);
+
+db.cu_campaign_aggregate_day.aggregate([
+  $match
+  ])

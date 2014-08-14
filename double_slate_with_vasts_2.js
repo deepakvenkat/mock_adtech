@@ -6,6 +6,8 @@ var initParams = [ "url", "600", "450", true, "http://adserver.adtechus.com/adco
 var bottom_margin = 65; //Use this variable to move the skip timer up or down. Eg. setting to 30 will move the skip 30px from the bottom
 setCUMuteButton(true, false);
 setCunlockSkipButton(true, 5,bottom_margin,true, 5);
+cunlockSetBrandBoxMessage("this is a campaign level override too", true, "http://www.autoinsuranceindepth.com/internal/images/logo-geico.gif");
+setCUAdId("4604357", "1234568");
 var exclusive = false;
 var message = "";
 var autoplay = false;
@@ -93,7 +95,7 @@ var cuEndSlateParams = {
       pixel : ""
     }
     //should be an object for each social button
-  }  
+  }
 };
 
 setCUEndSlate(cuEndSlateParams);
